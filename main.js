@@ -1,1 +1,1 @@
-/* ==== DIALOGUE 2019 SCRIPT ==== */
+/* ==== DIALOGUE 2019 MAIN SCRIPT ==== */
