@@ -1,3 +1,8 @@
 /*****************************************/
 /*        Dialogue 2019 Main Style       */
 /*****************************************/
+.hero {
+    background: blue;
+    min-height: 100vh; }
+.main__title {
+    text-align: center; }
