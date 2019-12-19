@@ -39,13 +39,16 @@ h1, h2, h3, h4, h5, h6, p, em, body, html, input, textarea, strong {
     margin: 0;
     font-kerning: normal;
 }
+h1, h2, h3, h4 {
+  text-align: center;
+}
 h1 {
-    font-size: calc(52px + (92 - 52) * ((99vw - 700px) / (1900 - 700)));
-    font-weight: 600;
-    line-height: 96px;
+    font-size: calc(48px + (52 - 48) * ((99vw - 300px) / (1900 - 300)));
+    font-weight: 400;
+    letter-spacing: 3px;
 }
 h2 {
-    font-size: calc(28px + (64 - 28) * ((99vw - 300px) / (1900 - 300)));
+    font-size: calc(52px + (82 - 52) * ((99vw - 700px) / (1900 - 700)));
     font-weight:500;
     line-height:75px;
 }
@@ -55,22 +58,12 @@ h3 {
     line-height: calc(1em + .5em);
 }
 h4 {
-    font-size: calc(17px + (21 - 17) * ((100vw - 300px) / (1900 - 300)));
+    font-size: calc(22px + (24 - 22) * ((100vw - 300px) / (1900 - 300)));
     font-weight:300;
     font-style:normal;
 }
-h5 {
-    font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1900 - 300)));
-    font-weight:600;
-    font-style:normal;
-}
-h6 {
-    font-size: calc(9px + (12 - 9) * ((100vw - 300px) / (1900 - 300)));
-    font-weight: 500;
-    font-style:normal;
-}
 p {
-    font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1900 - 300)));
+    font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (1900 - 300)));
     font-weight: 500;
     font-style: normal;
     line-height: 36px;
@@ -97,7 +90,7 @@ html, body {
 .inline {
     display: inline-block;
 }
-.flex-v {
+.flex-v, .flex-v[class*="span"] {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -107,7 +100,7 @@ html, body {
     justify-content: center;
     resize: vertical;
 }
-.flex-h {
+.flex-h, .flex-h[class*="span"] {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -123,12 +116,6 @@ html, body {
    display: block; 
    height: 0; 
    clear: both;
-}
-.hide {
-    visibility: hidden;
-}
-.show {
-    visibility: visible;
 }
 
 /*Responsive*/
