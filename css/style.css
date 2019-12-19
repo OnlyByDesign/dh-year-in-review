@@ -28,20 +28,41 @@
   letter-spacing: 1px;
   font-style: italic; }
 
+/*=======UNIVERSAL========*/
+.main, .main[class*="span"] {
+  height: 100vh;
+  padding: 6rem 0;
+  position: relative; }
+.main__title--group {
+  padding-bottom: 6rem; }
+.light h3, .light h4, .light p, .light span, .light ul li {
+  color: black; }
+.dark h3, .dark h4, .dark p, .dark span, .dark ul li {
+  color: white; }
+.main__subtitle {
+  padding-top: .75rem; }
+.main__copy, .main__copy[class*="span"] {
+  width: 720px;
+  margin: 0 auto !important;
+  float: none; }
+
 /*=======NUMBERS========*/
-.numbers {
-  height: 100vh; }
-.numbers .main__title {
+.numbers { }
+.numbers .main__title h2 {
   color: var(--darkblue); }
 
 /*=======FUELING========*/
 .fueling {
-  height: 100vh;
+  border-radius: 150px 150px 0 0;
   background: var(--darkblue); }
+.fueling .main__title h2 {
+  color: var(--yellow); }
 
 /*=======REWARDS========*/
-.rewards {
+.rewarding {
   background: white; }
+.rewarding .main__title h2 {
+  color: var(--darkblue); }
 
 /*=======MENTAL========*/
 .mental {
@@ -70,9 +91,3 @@
 /*=======MESSAGE========*/
 .message {
   background: white; }
-
-
-
-
-
-

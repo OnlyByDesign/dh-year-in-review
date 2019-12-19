@@ -48,6 +48,7 @@ h2 {
     font-size: calc(50px + (72 - 50) * ((99vw - 700px) / (1900 - 700)));
     font-weight:800;
     line-height:75px;
+    letter-spacing: -1px;
 }
 h3 {
     font-size: calc(18px + (32 - 26) * ((100vw - 300px) / (1900 - 300)));
@@ -55,25 +56,26 @@ h3 {
     line-height: calc(1em + .5em);
 }
 h4 {
-    font-size: calc(22px + (24 - 22) * ((100vw - 300px) / (1900 - 300)));
-    font-weight:300;
+    font-size: 22px;
+    font-weight: 600;
     font-style:normal;
+    letter-spacing: 1px;
 }
 p {
-    font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (1900 - 300)));
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: .11rem;
     font-style: normal;
     line-height: 36px;
 }
 ul, ul li {
-    font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1900 - 300)));
+    font-size: 16px;
     font-weight: 400;
     line-height: 32px;
     list-style: none;
     list-style-type: none;
 }
 span {
-  font-size: calc(16px + (18 - 16) * ((99vw - 300px) / (1900 - 300)));
   font-weight: 700;
 }
 a {
