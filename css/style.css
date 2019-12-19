@@ -26,3 +26,14 @@
 .hero .hero__subtitle {
   font-size: calc(22px + (32 - 22) * ((100vw - 300px) / (1900 - 300)));
   font-weight: 400; }
+.hero .hero__icon, .hero .hero__icon[class*=span] {
+  height: 125px;
+  width: 125px;
+  display: block;
+  text-align: center;
+  margin: 30px auto;
+  float: none;
+  background: white;
+  border-radius: 50%; }
+.hero .hero__sub {
+  text-align: center; }
