@@ -2,7 +2,14 @@
     width: 95%;
     padding-top: 10px;
     position: fixed;
-    background: transparent; }
+    background: transparent;
+    -webkit-transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -o-transition: all .25s linear;
+    -ms-transition: all .25s linear;
+    transition: all .25s linear;}
+  .header.active {
+    background: var(--darkblue); }
   .header__logo {
     height: auto;
     display: inline-block;  }

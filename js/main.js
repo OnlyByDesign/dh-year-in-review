@@ -1,4 +1,3 @@
-/* ==== DIALOGUE 2019 MAIN SCRIPT ==== */
 /*function removejscssfile(filename, filetype){
     var targetelement=(filetype=="js")? "script" : (filetype=="css")? "link" : "none" //determine element type to create nodelist from
     var targetattr=(filetype=="js")? "src" : (filetype=="css")? "href" : "none" //determine corresponding attribute to test for
@@ -9,3 +8,5 @@
     };
 };
 removejscssfile("layout.min.css", "css")*/
+
+console.log('init main');

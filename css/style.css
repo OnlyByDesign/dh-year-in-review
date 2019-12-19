@@ -1,26 +1,10 @@
-/* @import url('http://example.com/example_style.css'); */
-
-/***********************************************/
-/* CSS @imports must be at the top of the file */
-/* Add them above this section                 */
-/***********************************************/
-
-/****************************************/
-/* HubSpot Style Boilerplate            */
-/****************************************/
-
-/* These includes are optional, but helpful.
-{% include "hubspot/styles/responsive/modules.css" %}
-{% include "hubspot/styles/patches/recommended.css" %}
- */
-
-/*****************************************/
-/* Start your style declarations here    */
-/*****************************************/
 .hero {
-  background: var(--darkblue);
   height: 100vh;
-  border-radius: 0 0 500px 0; }
+  border-radius: 0 0 500px 0;
+  background: linear-gradient(0deg,rgba(0,116,192, 0.95),rgba(51,172,245, .75)),url(https://cdn2.hubspot.net/hubfs/5213739/2019%20Year%20in%20Review%20Landing%20Page/Yea%20in%20review%202019%20-%20quick%20mockup%20.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
 .hero .hero__title {
   padding-bottom: .5rem; }
 .hero .hero__subtitle {
