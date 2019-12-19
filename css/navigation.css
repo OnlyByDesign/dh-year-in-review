@@ -1,0 +1,17 @@
+.header {
+    width: 95%;
+    padding-top: 10px;
+    position: fixed;
+    background: transparent; }
+  .header__logo {
+    height: auto;
+    display: inline-block;  }
+  .header__logo img {
+    max-width: 250px;
+    display: block; }
+  .header__nav {
+    float: right;
+    margin: 20px 0; }
+  .header__nav ul li {
+    padding-right: 50px;
+    display: inline-block; }

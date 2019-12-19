@@ -1,0 +1,28 @@
+/* @import url('http://example.com/example_style.css'); */
+
+/***********************************************/
+/* CSS @imports must be at the top of the file */
+/* Add them above this section                 */
+/***********************************************/
+
+/****************************************/
+/* HubSpot Style Boilerplate            */
+/****************************************/
+
+/* These includes are optional, but helpful.
+{% include "hubspot/styles/responsive/modules.css" %}
+{% include "hubspot/styles/patches/recommended.css" %}
+ */
+
+/*****************************************/
+/* Start your style declarations here    */
+/*****************************************/
+.hero {
+  background: var(--darkblue);
+  height: 100vh;
+  border-radius: 0 0 500px 0; }
+.hero .hero__title {
+  padding-bottom: 10px; }
+.hero .hero__subtitle {
+  font-size: calc(22px + (32 - 22) * ((100vw - 300px) / (1900 - 300)));
+  font-weight: 400; }
