@@ -22,7 +22,7 @@
   height: 100vh;
   border-radius: 0 0 500px 0; }
 .hero .hero__title {
-  padding-bottom: 10px; }
+  padding-bottom: .5rem; }
 .hero .hero__subtitle {
   font-size: calc(22px + (32 - 22) * ((100vw - 300px) / (1900 - 300)));
   font-weight: 400; }
