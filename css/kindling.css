@@ -45,12 +45,12 @@ h1 {
     letter-spacing: 3px;
 }
 h2 {
-    font-size: calc(52px + (82 - 52) * ((99vw - 700px) / (1900 - 700)));
-    font-weight:500;
+    font-size: calc(50px + (72 - 50) * ((99vw - 700px) / (1900 - 700)));
+    font-weight:800;
     line-height:75px;
 }
 h3 {
-    font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1900 - 300)));
+    font-size: calc(18px + (32 - 26) * ((100vw - 300px) / (1900 - 300)));
     font-weight:500;
     line-height: calc(1em + .5em);
 }
@@ -73,6 +73,7 @@ ul, ul li {
     list-style-type: none;
 }
 span {
+  font-size: calc(16px + (18 - 16) * ((99vw - 300px) / (1900 - 300)));
   font-weight: 700;
 }
 a {
