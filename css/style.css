@@ -2,7 +2,7 @@
 .hero {
   height: 100vh;
   border-radius: 0 0 500px 0;
-  background: linear-gradient(0deg,rgba(0,116,192, 0.95),rgba(51,172,245, .75)),url('https://cdn2.hubspot.net/hubfs/5213739/2019%20Year%20in%20Review%20Landing%20Page/Yea%20in%20review%202019%20-%20quick%20mockup%20(1).jpg');
+  background: linear-gradient(0deg,rgba(0,116,192, 0.95),rgba(51,172,245, .75)),url("https://cdn2.hubspot.net/hubfs/5213739/2019%20Year%20in%20Review%20Landing%20Page/Yea%20in%20review%202019%20-%20quick%20mockup%20(1).jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed; }
@@ -47,7 +47,8 @@
   float: none; }
 
 /*=======NUMBERS========*/
-.numbers { }
+.numbers {
+  background: white; }
 .numbers .main__title h2 {
   color: var(--darkblue); }
 
