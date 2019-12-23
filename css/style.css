@@ -31,7 +31,7 @@
 /*=======UNIVERSAL========*/
 .main, .main[class*="span"] {
   height: 100vh;
-  padding: 6rem 0;
+  padding: 6rem 0 7rem 0;
   position: relative; }
 .main__title--group {
   padding-bottom: 6rem; }
@@ -55,18 +55,18 @@
   min-height: 600px;
   text-align: center; }
 .numbers__selected--item img {
-    min-width: 250px;
-    min-height: 250px;
-    background: lightgrey;
+  min-width: 250px;
+  min-height: 250px;
+  background: lightgrey;
   margin: 0 auto;} 
 .numbers__selected--item h2 {
   color: var(--darkblue);
-  padding-top: 30px; }
+  padding-top: 2rem; }
 .numbers__selected--item h4 {
   font-weight: 400; }
 .numbers__icon--item {
   min-width: 100px;
-  padding: 0 30px;
+  padding: 0 2rem;
   text-align: center;
   cursor: pointer; }
 .numbers__icon--item p {
