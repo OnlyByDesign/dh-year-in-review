@@ -1,4 +1,4 @@
-/*function removejscssfile(filename, filetype){
+/*function removefile(filename, filetype){
     var targetelement=(filetype=="js")? "script" : (filetype=="css")? "link" : "none" //determine element type to create nodelist from
     var targetattr=(filetype=="js")? "src" : (filetype=="css")? "href" : "none" //determine corresponding attribute to test for
     var allsuspects=document.getElementsByTagName(targetelement)
@@ -7,6 +7,6 @@
         allsuspects[i].parentNode.removeChild(allsuspects[i]) //remove element by calling parentNode.removeChild()
     };
 };
-removejscssfile("layout.min.css", "css")*/
+removefile("layout.min.css", "css")*/
 
 console.log('init main');
