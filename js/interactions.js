@@ -1,6 +1,9 @@
+var navActive = function navActive() {
+    $(window).scrollTop() > 100 ? $('.header').addClass('active') : $('.header').removeClass('active');
+};
+
 $(window).scroll(function() {
-    var target = $(".header");
-    $(window).scrollTop() > 100 ? target.addClass('active') : target.removeClass('active');
+    navActive();
 });
 
-console.log('init interaction');
+console.log('Init interaction');

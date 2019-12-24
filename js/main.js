@@ -9,4 +9,4 @@
 };
 removefile("layout.min.css", "css")*/
 
-console.log('init main');
+console.log('Init main');
