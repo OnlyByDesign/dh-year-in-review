@@ -1,4 +1,22 @@
-/*=======HERO========*/
+/*===================UNIVERSAL=================*/
+.main, .main[class*="span"] {
+  height: 100vh;
+  padding: 6rem 0 7rem 0;
+  position: relative; }
+.main__title--group {
+  padding-bottom: 6rem; }
+.light h3, .light h4, .light p, .light span, .light ul li {
+  color: black; }
+.dark h3, .dark h4, .dark p, .dark span, .dark ul li {
+  color: white; }
+.main__subtitle {
+  padding-top: .75rem; }
+.main__copy, .main__copy[class*="span"] {
+  width: 720px;
+  margin: 0 auto !important;
+  float: none; }
+
+/*======================HERO=======================*/
 .hero {
   height: 100vh;
   border-radius: 0 0 500px 0;
@@ -28,25 +46,7 @@
   letter-spacing: 1px;
   font-style: italic; }
 
-/*=======UNIVERSAL========*/
-.main, .main[class*="span"] {
-  height: 100vh;
-  padding: 6rem 0 7rem 0;
-  position: relative; }
-.main__title--group {
-  padding-bottom: 6rem; }
-.light h3, .light h4, .light p, .light span, .light ul li {
-  color: black; }
-.dark h3, .dark h4, .dark p, .dark span, .dark ul li {
-  color: white; }
-.main__subtitle {
-  padding-top: .75rem; }
-.main__copy, .main__copy[class*="span"] {
-  width: 720px;
-  margin: 0 auto !important;
-  float: none; }
-
-/*=======NUMBERS========*/
+/*=====================NUMBERS=====================*/
 .numbers.main, .numbers.main [class*="span"] { 
   height: 100%; }
 .numbers .main__title h2 {
@@ -79,49 +79,49 @@
   border: 2px solid black;
   margin: 0 auto; }
 
-/*=======FUELING========*/
+/*====================FUELING======================*/
 .fueling {
   border-radius: 150px 150px 0 0;
   background: var(--darkblue); }
 .fueling .main__title h2 {
   color: var(--yellow); }
 
-/*=======REWARDS========*/
+/*=====================REWARDS=====================*/
 .rewarding {
   background: white; }
 .rewarding .main__title h2 {
   color: var(--darkblue); }
 
-/*=======MENTAL========*/
+/*======================MENTAL=====================*/
 .mental {
   background: var(--lightblue); }
 .mental .main__title h2 {
   color: var(--darkblue); }
 
-/*=======SECURITY========*/
+/*=====================SECURITY===================*/
 .security {
   background: var(--darkblue); }
 .security .main__title h2 {
   color: var(--yellow); }
 
-/*=======INNOVATION========*/
+/*====================INNOVATION==================*/
 .innovation {
   background: var(--lightgrey); }
 .innovation .main__title h2 {
   color: var(--darkblue); }
 
-/*=======TESTIMONIALS========*/
+/*====================TESTIMONIALS=================*/
 .testimonials {
   background: var(--lightblue); }
 
-/*=======LIFE========*/
+/*=======================LIFE======================*/
 .life {
   background: var(--darkblue); }
 
-/*=======STAND========*/
+/*======================STAND======================*/
 .stand {
   background: var(--midblue); }
 
-/*=======MESSAGE========*/
+/*======================MESSAGE====================*/
 .message {
   background: white; }
