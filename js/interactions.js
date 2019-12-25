@@ -18,13 +18,13 @@ var navActive = function navActive() {
   };
   // Init scrollMagic parallax
   var controller = new ScrollMagic.Controller();
-  var parallaxScroll = function parallaxScroll(el) {
+  var parallaxScroll = function parallaxScroll(el, speed) {
     $(el[0]).each(function() {
       var tl = new TimelineMax();
       var child = $(this).find(el[0].children);
       tl.to(
         child, 1, 
-        { y: -200, ease: Linear.easeNone }
+        { y: ((speed) + "px"), ease: Linear.easeNone }
       );
       var scene = new ScrollMagic.Scene({
         triggerElement: this,
@@ -38,11 +38,15 @@ var navActive = function navActive() {
   // throttle this
   $(window).scroll(function() {
     if ($(window).scrollTop() < 200) navActive();
-    //if ($("#rewardingGrowth").isOnScreen()) parallaxScroll($("#rewardingParallax"));
   });
   
   (function init() {
     navActive();
-    parallaxScroll($("#rewardingParallax"));
+    parallaxScroll($("#rewardingParallax1"), -350);
+    parallaxScroll($("#rewardingParallax2"), -100);
     console.log('Init interaction');
   })();
+  
+  
+  
+  
