@@ -142,7 +142,8 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  bottom: 0; }
+  bottom: 0;
+  z-index: 0; }
 .rewarding .rewarding__graph div {
   width: 6%;
   min-width: 100px;
@@ -155,36 +156,39 @@ body {
   -o-transition: all 1.5s;
   -ms-transition: all 1.5s;
   transition: all 1.5s;
-  transition-timing-function: cubic-bezier(0.25, 0.25, 0.005, 1)}
+  transition-timing-function: cubic-bezier(0.25, 0.25, 0.005, 1); }
 .rewarding__graph div:nth-child(1) {
   height: 25px; }
 .rewarding__graph div:nth-child(2) {
   height: 100px; }
-.rewarding__graph div:nth-child(3) {
+.rewarding__graph.active div:nth-child(3) {
   height: 150px; }
-.rewarding__graph div:nth-child(4) {
+.rewarding__graph.active div:nth-child(4) {
   height: 250px; }
-.rewarding__graph div:nth-child(5) {
+.rewarding__graph.active div:nth-child(5) {
   height: 250px; }
-.rewarding__graph div:nth-child(6) {
+.rewarding__graph.active div:nth-child(6) {
   height: 300px; }
-.rewarding__graph div:nth-child(7) {
+.rewarding__graph.active div:nth-child(7) {
   height: 350px; }
 .rewarding__graph.active div:nth-child(8) {
   height: 700px;
   background: var(--darkblue); }
+
 .rewarding .rewarding__parallax {
   overflow-x: hidden;
   overflow-y: hidden;
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: -1; }
+  z-index: -1;
+  pointer-events: none;}
 .rewarding .rewarding__parallax h2 {
   font-size: 190px;
   position: absolute;
   color: var(--orange); 
   opacity: 0.4; }
+
 .rewarding #rewardingParallax1 h2:nth-child(1) {
   font-size: 16em;
   opacity: .3;
@@ -201,6 +205,10 @@ body {
 .rewarding #rewardingParallax1 h2:nth-child(4) {
   top: 110%;
   left: 90%; }
+.rewarding #rewardingParallax1 h2:nth-child(5) {
+  top: 141%;
+  left: 54%; }
+
 .rewarding #rewardingParallax2 h2:nth-child(1) {
   font-size: 18em;
   opacity: 0.3;
