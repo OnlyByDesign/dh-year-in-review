@@ -1,12 +1,12 @@
-/*function removefile(filename, filetype){
-    var targetelement=(filetype=="js")? "script" : (filetype=="css")? "link" : "none" //determine element type to create nodelist from
-    var targetattr=(filetype=="js")? "src" : (filetype=="css")? "href" : "none" //determine corresponding attribute to test for
-    var allsuspects=document.getElementsByTagName(targetelement)
-    for (var i=allsuspects.length; i>=0; i--){ //search backwards within nodelist for matching elements to remove
-    if (allsuspects[i] && allsuspects[i].getAttribute(targetattr)!=null && allsuspects[i].getAttribute(targetattr).indexOf(filename)!=-1)
-        allsuspects[i].parentNode.removeChild(allsuspects[i]) //remove element by calling parentNode.removeChild()
-    };
-};
-removefile("layout.min.css", "css")*/
-
-console.log('Init main');
+var navActive = function navActive() {
+    $(window).scrollTop() > 100 ? $('.header').addClass('active') : $('.header').removeClass('active');
+  }; // This changes the nav after 100px of scrolling | adds 'active' class
+  
+  $(window).scroll(function() {
+    if ($(window).scrollTop() < 200) navActive();
+  }); // On scroll functions
+  
+  (function init() {
+    navActive();
+    console.log('Init main');
+  })(); // Initializer for main.js
