@@ -17,45 +17,32 @@ var navActive = function navActive() {
     return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
   };
   // Init scrollMagic parallax
-  //var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
   var controller = new ScrollMagic.Controller();
-  /*var parallaxScroll = function parallaxScroll(el) {
-    $(el.children).each(function() {
-      var child = $(el[0]).children();
-      var i;
-      child.forEach(function(child, index){
-        new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}})
-                      .setTween(child[index], {y: "80%", ease: Linear.easeNone})
-                      .addIndicators()
-                      .addTo(controller);
-      });
-  };*/
   var parallaxScroll = function parallaxScroll(el) {
-    $(el).each(function() {
+    $(el[0]).each(function() {
       var tl = new TimelineMax();
-      var child = $(this).find(el.children());
-      tl.to( child, 1, {y: ((Math.floor(Math.random() * 250) + 150) + 'px'), ease: Linear.easeNone });
+      var child = $(this).find(el[0].children);
+      tl.to(
+        child, 1, 
+        { y: -200, ease: Linear.easeNone }
+      );
       var scene = new ScrollMagic.Scene({
         triggerElement: this,
         triggerHook: 0.4,
         duration: "100%"
-      }).setTween(tl).addIndicators({
-          colorTrigger: "black",
-          colorStart: "black",
-          colorEnd: "black",
-          indent: 10
-        }).addTo(controller);
+      }).setTween(tl).addTo(controller);
     });
-  }
+  };
   
   
   // throttle this
   $(window).scroll(function() {
     if ($(window).scrollTop() < 200) navActive();
-    if ($("#rewardingGrowth").isOnScreen()) parallaxScroll($("#rewardingParallax"));
+    //if ($("#rewardingGrowth").isOnScreen()) parallaxScroll($("#rewardingParallax"));
   });
   
   (function init() {
     navActive();
+    parallaxScroll($("#rewardingParallax"));
     console.log('Init interaction');
   })();
