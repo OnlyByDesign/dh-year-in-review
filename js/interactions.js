@@ -45,8 +45,8 @@ $.fn.isOnScreen = function(){
     
   (function init() {
     navActive();
-    parallaxScroll($("#rewardingParallax1"), -500, 1, 125);
-    parallaxScroll($("#rewardingParallax2"), -250, 1, 150);
+    parallaxScroll($("#rewardingParallax1"), -500, 1, 200);
+    parallaxScroll($("#rewardingParallax2"), -250, 1, 250);
     console.log('Init interaction');
   })(); // Initializer for interaction.js
     
