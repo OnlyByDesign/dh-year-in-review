@@ -88,18 +88,20 @@ body {
   padding-top: 2rem; }
 .numbers__selected--item h4 {
   padding-top: .5rem;
-  font-weight: 400; }
+  font-weight: 500; }
 .numbers__icon--item {
   min-width: 100px;
   padding: 0 2rem;
   text-align: center;
   cursor: pointer; }
-.numbers__icon--item p {
-  font-size: 14px;
-  font-weight: 900; }
+.numbers__icon--item h5 {
+  font-size: 16px;
+  padding-bottom: 0.5rem; }
 .numbers__icon--item img {
   min-width: 100px;
+  max-width: 100px;
   min-height: 100px;
+  max-height: 100px;
   border-radius: 50%;
   border: 2px solid black;
   margin: 0 auto; }
@@ -133,9 +135,44 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  overflow-x: hidden;
+  overflow: hidden;
   z-index: -1;
   pointer-events: none; }
+.rewarding .rewarding__graph {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0; }
+.rewarding .rewarding__graph div {
+  width: 6%;
+  min-width: 100px;
+  height: 0;
+  margin: 0 2.5%;
+  background: var(--lightblue);
+  margin-top: auto;
+  -webkit-transition: all 1.5s;
+  -moz-transition: all 1.5s;
+  -o-transition: all 1.5s;
+  -ms-transition: all 1.5s;
+  transition: all 1.5s;
+  transition-timing-function: cubic-bezier(0.25, 0.25, 0.005, 1)}
+.rewarding__graph div:nth-child(1) {
+  height: 25px; }
+.rewarding__graph div:nth-child(2) {
+  height: 100px; }
+.rewarding__graph div:nth-child(3) {
+  height: 150px; }
+.rewarding__graph div:nth-child(4) {
+  height: 250px; }
+.rewarding__graph div:nth-child(5) {
+  height: 250px; }
+.rewarding__graph div:nth-child(6) {
+  height: 300px; }
+.rewarding__graph div:nth-child(7) {
+  height: 350px; }
+.rewarding__graph.active div:nth-child(8) {
+  height: 700px;
+  background: var(--darkblue); }
 .rewarding .rewarding__parallax {
   overflow-x: hidden;
   overflow-y: hidden;
@@ -146,16 +183,16 @@ body {
 .rewarding .rewarding__parallax h2 {
   font-size: 190px;
   position: absolute;
-  color: var(--darkblue); 
-  opacity: 0.25; }
+  color: var(--orange); 
+  opacity: 0.4; }
 .rewarding #rewardingParallax1 h2:nth-child(1) {
-  font-size: 8em;
-  opacity: 0.125;
-  top: 86%;
-  left: 59%; }
+  font-size: 16em;
+  opacity: .3;
+  top: 83%;
+  left: 58%; }
 .rewarding #rewardingParallax1 h2:nth-child(2) {
   font-size: 20em;
-  opacity: 0.125;
+  opacity: 0.3;
   top: 59%;
   left: 6%; }
 .rewarding #rewardingParallax1 h2:nth-child(3) {
@@ -165,8 +202,10 @@ body {
   top: 110%;
   left: 90%; }
 .rewarding #rewardingParallax2 h2:nth-child(1) {
-  top: 10%;
-  left: 63%; }
+  font-size: 18em;
+  opacity: 0.3;
+  top: 2%;
+  left: 67%; }
 .rewarding #rewardingParallax2 h2:nth-child(2) {
   top: 25%;
   left: 42%; }
