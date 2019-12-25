@@ -1,4 +1,6 @@
 /*==============UNIVERSAL===============*/
+body {
+  overflow-x: hidden; }
 .main, 
 .main[class*="span"] {
   height: 100vh;
@@ -119,7 +121,7 @@
     z-index: 1;
     pointer-events: none; }
 
-/*=====================REWARDS===============*/
+/*=====================REWARDING===============*/
 .rewarding {
   background: transparent; }
 .rewarding .main__title h2 {
@@ -131,44 +133,50 @@
   position: absolute;
   top: 0;
   left: 0;
-  overflow-x: hidden;}
-.rewarding #rewardingParallax {
+  overflow-x: hidden;
+  z-index: -1;
+  pointer-events: none; }
+.rewarding .rewarding__parallax {
   overflow-x: hidden;
   overflow-y: hidden;
   width: 100%;
   height: 100%;
   position: absolute;
   z-index: -1; }
-.rewarding #rewardingParallax h2 {
+.rewarding .rewarding__parallax h2 {
   font-size: 190px;
   position: absolute;
   color: var(--darkblue); 
   opacity: 0.25; }
-.rewarding #rewardingParallax h2:nth-child(1) {
-  top: 76%;
-  left: 70%; }
-.rewarding #rewardingParallax h2:nth-child(2) {
+.rewarding #rewardingParallax1 h2:nth-child(1) {
+  font-size: 8em;
+  opacity: 0.125;
+  top: 86%;
+  left: 59%; }
+.rewarding #rewardingParallax1 h2:nth-child(2) {
+  font-size: 20em;
+  opacity: 0.125;
   top: 59%;
   left: 6%; }
-.rewarding #rewardingParallax h2:nth-child(3) {
+.rewarding #rewardingParallax1 h2:nth-child(3) {
   top: 0;
   left: 14%; }
-.rewarding #rewardingParallax h2:nth-child(4) {
+.rewarding #rewardingParallax1 h2:nth-child(4) {
   top: 110%;
   left: 90%; }
-.rewarding #rewardingParallax h2:nth-child(5) {
+.rewarding #rewardingParallax2 h2:nth-child(1) {
   top: 10%;
-  left: 70%; }
-.rewarding #rewardingParallax h2:nth-child(6) {
+  left: 63%; }
+.rewarding #rewardingParallax2 h2:nth-child(2) {
   top: 25%;
   left: 42%; }
-.rewarding #rewardingParallax h2:nth-child(7) {
-  top: 20%;
-  left: 90%; }
-.rewarding #rewardingParallax h2:nth-child(8) {
-  top: 68%;
-  left: 50%; }
-.rewarding #rewardingParallax h2:nth-child(9) {
+.rewarding #rewardingParallax2 h2:nth-child(3) {
+  top: 34%;
+  left: 91%; }
+.rewarding #rewardingParallax2 h2:nth-child(4) {
+  top: 64%;
+  left: 34%; }
+.rewarding #rewardingParallax2 h2:nth-child(5) {
   top: 101%;
   left: 21%; }
 
@@ -195,7 +203,7 @@
   padding-top: 7rem;
   text-align: center; }
 .security .security__foreground img {
-  height: 185px; }
+  height: 160px; }
 .security .security__background {
   width: 110%;
   position: absolute;
