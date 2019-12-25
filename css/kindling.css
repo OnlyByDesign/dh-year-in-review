@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800&display=swap');
+:root {
+  --darkblue: #0074C0;
+  --midblue: #33ACF5;
+  --lightblue: #E5F4FD;
+  --yellow: #FFDD92;
+  --orange: #FBDEC8;
+  --lightgrey: #F7F9FA;
+}
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    -webkit-font-variant-ligatures: none;
+    font-variant-ligatures: none;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Typography*/
+h1, h2, h3, h4, h5, h6, p, em, body, html, input, textarea, strong {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-kerning: normal;
+}
+h1, h2, h3, h4 {
+  text-align: center;
+}
+h1 {
+    font-size: calc(48px + (52 - 48) * ((99vw - 300px) / (1900 - 300)));
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+h2 {
+    font-size: calc(50px + (72 - 50) * ((99vw - 700px) / (1900 - 700)));
+    font-weight:800;
+    line-height:75px;
+    letter-spacing: -1px;
+}
+h3 {
+    font-size: calc(18px + (32 - 26) * ((100vw - 300px) / (1900 - 300)));
+    font-weight:500;
+    line-height: calc(1em + .5em);
+}
+h4 {
+    font-size: 22px;
+    font-weight: 600;
+    font-style:normal;
+    letter-spacing: 1px;
+}
+h5, p {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: .11rem;
+    font-style: normal;
+    line-height: 36px;
+}
+h5 {
+  font-weight: 600;
+}
+ul, ul li {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 32px;
+    list-style: none;
+    list-style-type: none;
+}
+span {
+  font-weight: 700;
+}
+a {
+    text-decoration: none;
+}
+
+/*Universal*/
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.inline {
+    display: inline-block;
+}
+.flex-v, .flex-v[class*="span"] {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    resize: vertical;
+}
+.flex-h, .flex-h[class*="span"] {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: center;
+    resize: horizontal;
+}
+.clearfix::after { 
+   content: " ";
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+.transition {
+  -webkit-transition: all .15s;
+  -moz-transition: all .15s;
+  -o-transition: all .15;
+  -ms-transition: all .15s;
+  transition: all .15s;
+  transition-timing-function: cubic-bezier(0.25, 0.25, 0.005, 1);
+}
+
+/*Responsive*/
+@media screen and (max-width: 1920px) { 
+
+}
+@media screen and (max-width: 1550px) {
+    
+}
+@media screen and (max-width: 1250px) {
+  
+}
+@media screen and (max-width: 1150px) {
+
+}
+@media screen and (max-width: 1024px) {
+  
+}
+@media screen and (max-width: 992px) {
+  
+}
+@media screen and (max-width: 950px) {
+    
+}
+@media screen and (max-width: 825px) {
+  
+}
+@media screen and (max-width: 770px) {
+
+}
+@media screen and (max-width: 768px) {
+  
+}
+@media screen and (max-width: 700px) {
+  
+}
+@media screen and (max-width: 500px) {
+
+}
+@media screen and (max-width: 450px) {
+    
+}
+@media screen and (max-width: 400px) {
+    
+}
+@media screen and (max-width: 350px) {
+
+}
