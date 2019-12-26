@@ -1,3 +1,7 @@
+/*=====================================
+ * =====================================
+ * Universal functions
+ * ==================================*/
 $.fn.isOnScreen = function() { 
     var win, viewport, bounds;
     win = $(window);
@@ -12,6 +16,10 @@ $.fn.isOnScreen = function() {
       if (!target.parent().hasClass("active")) target.parent().addClass("active");
     };
   };
+  /*=====================================
+   * =====================================
+   * Parallax functions
+   * ==================================*/
   var parallaxScroll = function parallaxScroll(el, vertical, horizontal, hook, duration) {
     var controller = new ScrollMagic.Controller();
     var build = (function() {
@@ -42,7 +50,10 @@ $.fn.isOnScreen = function() {
         .addTo(controller);
       })();
   };
-  
+  /*=====================================
+   * =====================================
+   * Initializer / Controller
+   * ==================================*/
   (function init() {
     $(window).scroll(function() {
       isActive($(".rewarding__bars"), $("#rewardingGraphTrigger"));
