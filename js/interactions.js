@@ -1,8 +1,21 @@
-/*=====================================
- * =====================================
- * Universal functions
- * ==================================*/
-$.fn.isOnScreen = function() { 
+var DOM = {
+    hero: $("#hero")[0],
+    numbers: $("#byTheNumbers")[0],
+    fueling: $("#fuelingFuture")[0],
+    rewarding: $("#rewardingGrowth")[0],
+    mental: $("#mentalHealth")[0],
+    security: $("#securityTelecom")[0],
+    innovation: $("#innovationBest")[0],
+    testimonials: $("#memorableTestimonials")[0],
+    life: $("#lifeDialogue")[0],
+    stand: $("#standFor")[0],
+    message: $("#messageLeaders")[0]
+  };
+  /*=====================================
+   * =====================================
+   * Universal functions
+   * ==================================*/
+  $.fn.isOnScreen = function() { 
     var win, viewport, bounds;
     win = $(window);
     viewport = { top : win.scrollTop(), left : win.scrollLeft() };
@@ -10,11 +23,6 @@ $.fn.isOnScreen = function() {
     bounds = this.offset();
     bounds.right = bounds.left + this.outerWidth(), bounds.bottom = bounds.top + this.outerHeight();
     return (!( viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom ));
-  };
-  var isActive = function isActive(el, target) {
-    if (el.isOnScreen()) {
-      if (!target.parent().hasClass("active")) target.parent().addClass("active");
-    };
   };
   /*=====================================
    * =====================================
@@ -52,12 +60,43 @@ $.fn.isOnScreen = function() {
   };
   /*=====================================
    * =====================================
+   * DOM functions
+   * ==================================*/
+  function isActive(el, target) {
+    if (el.isOnScreen()) {
+      if (!target.parent().hasClass("active")) target.parent().addClass("active");
+    };
+  };
+  function swapActive(el, target, value1, value2) {
+    $(el).click(function() {
+      var a = "active";
+      var get = $($(('#' + this.id.replace(value1, value2)))[0]);
+      if (!get.hasClass(a)) {
+        console.log(get);
+        $(target + '.' + a).removeClass(a);
+        get.addClass(a);
+      };
+    });
+  };
+  function scrollEvent() {
+    $(window).scroll(function() { 
+      isActive($(".rewarding__bars"), $("#rewardingGraphTrigger"));
+    });
+  };
+  /*=====================================
+   * =====================================
    * Initializer / Controller
    * ==================================*/
   (function init() {
-    $(window).scroll(function() {
-      isActive($(".rewarding__bars"), $("#rewardingGraphTrigger"));
-    });
+    var domInit = {
+      initial: {
+        0: scrollEvent(),
+        1: $("#selected1").parent().parent().addClass("active")
+      },
+      click: {
+        0: swapActive( ".numbers__icon--item", ".numbers__selected", "item", "selected",  )
+      }
+    };
     var parallaxInit = {
       rewardInit: {
         0: parallaxScroll( $("#rewardingParallax1"), -500, 0, 1, 200 ),
@@ -70,8 +109,8 @@ $.fn.isOnScreen = function() {
         3: parallaxScroll( $("#mentalParallax3"), 0, -300, 1, 300 )
       },
       innovationInit: {
-        0: parallaxScroll( $("#innovationBgL"), -100, 0, 1, 200 ),
-        1: parallaxScroll( $("#innovationBgR"), -400, 0, 1, 200 )
+        0: parallaxScroll( $("#innovationBgL"), -200, 0, 1, 200 ),
+        1: parallaxScroll( $("#innovationBgR"), -500, 0, 1, 200 )
       },
       standInit: {
         0: parallaxPinner( $("#standPinTrigger"), $("#standFor"), 300 )
