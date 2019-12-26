@@ -302,7 +302,9 @@ body {
   height: 100%; }
 
 /*=====================INNOVATION===============*/
-.innovation {
+.innovation,
+.innovation[class*="span"] {
+  max-height: 105vh;
   background: transparent; }
 .innovation .main__title h2 {
   color: var(--darkblue); }
