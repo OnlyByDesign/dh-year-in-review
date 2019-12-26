@@ -1,4 +1,5 @@
-$.fn.isOnScreen = function(){
+$.fn.isOnScreen = function(){ 
+    // checks if a selection is visible in viewport
     var win = $(window);
     var viewport = {
       top : win.scrollTop(),
@@ -15,9 +16,9 @@ $.fn.isOnScreen = function(){
       viewport.bottom < bounds.top || 
       viewport.top > bounds.bottom
     ));
-  }; // checks if a div is visible in viewport
-  
+  };
   var parallaxScroll = function parallaxScroll(el, vertical, horizontal, hook, duration) {
+    // On scroll movement for html objects
     var controller = new ScrollMagic.Controller();
     var build = (function() {
       $(el[0]).each(function() {
@@ -35,27 +36,39 @@ $.fn.isOnScreen = function(){
         }).setTween(tl).addTo(controller);
       });
     })();
-  }; // On scroll parallax 
-  
-  var rewardInit = {
-    0: parallaxScroll($("#rewardingParallax1"), -500, 0, 1, 200),
-    1: parallaxScroll($("#rewardingParallax2"), -250, 0, 1, 250)
+  }; 
+  var parallaxPin = function parallaxPin() {
+    // Pins objects to screen for a period of time
+    var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 300})
+      .setPin("#pin1")
+      .addIndicators({name: "1 (duration: 300)"})
+      .addTo(controller);
+  }; 
+  var isActive = function isActive(el) {
+    if (el.isOnScreen() && !el.hasClass("active")) {
+      el.addClass("active");
+    } else {
+      el.removeClass("active");
+    };
   };
-  var mentalInit = {
-    0: parallaxScroll($("#mentalParallax0"), 0, 100, 1, 200 ),
-    1: parallaxScroll($("#mentalParallax1"), 0, -200, 1, 200 ),
-    2: parallaxScroll($("#mentalParallax2"), 0, 400, 1, 250 ),
-    3: parallaxScroll($("#mentalParallax3"), 0, -800, 1, 300 )
-  };
-  
-  $(window).scroll(function() {
-    // Rewarding section
-    var reward = $("#rewardingGraphTrigger");
-    if (reward.isOnScreen() && !reward.parent().hasClass("active")) reward.parent().addClass("active");
-  }); // On scroll functions
   
   (function init() {
-    rewardInit;
+    $(window).scroll(function() {
+      // Rewarding section
+      isActive($("#rewardingGraphTrigger"));
+    }); // On scroll functions
+    var parallaxInit = {
+      rewardInit: {
+        0: parallaxScroll( $("#rewardingParallax1"), -500, 0, 1, 200 ),
+        1: parallaxScroll( $("#rewardingParallax2"), -250, 0, 1, 200 )
+      },
+      mentalInit: {
+        0: parallaxScroll( $("#mentalParallax0"), 0, 100, 1, 200 ),
+        1: parallaxScroll( $("#mentalParallax1"), 0, -200, 1, 200 ),
+        2: parallaxScroll( $("#mentalParallax2"), 0, 400, 1, 250 ),
+        3: parallaxScroll( $("#mentalParallax3"), 0, -800, 1, 300 )
+      }
+    } // Initializer for parallax effects
     console.log('Init interaction');
   })(); // Initializer for interaction.js
     
