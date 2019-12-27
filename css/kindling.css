@@ -52,15 +52,15 @@ h2 {
     letter-spacing: -1px;
 }
 h3 {
-    font-size: calc(18px + (32 - 26) * ((100vw - 300px) / (1900 - 300)));
+    font-size: calc(32px + (44 - 32) * ((100vw - 300px) / (1900 - 300)));
     font-weight:500;
     line-height: calc(1em + .5em);
 }
 h4 {
     font-size: 22px;
-    font-weight: 600;
-    font-style:normal;
-    letter-spacing: 1px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 2px;
 }
 h5, p {
     font-size: 18px;
@@ -71,6 +71,12 @@ h5, p {
 }
 h5 {
   font-weight: 600;
+}
+h6 {
+  color: black;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: italic;
 }
 ul, ul li {
     font-size: 19px;

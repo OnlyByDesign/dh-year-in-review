@@ -6,7 +6,7 @@
   -ms-transition: all .15s linear;
   transition: all .15s linear; }
 .header {
-  width: 95%;
+  width: 100%;
   z-index: 999;
   padding-top: 10px;
   position: fixed;
@@ -21,6 +21,8 @@
   float: right;
   margin: 20px 0; }
 .header__nav ul li {
+  font-size: 17px;
+  letter-spacing: 2px;
   padding-right: 50px;
   display: inline-block; }
 
@@ -31,8 +33,17 @@
 .header.active .header__logo img {
   max-width: 175px; }
 .header.active .header__nav {
-  margin: 10px 0; }
+  margin: 9px 0; }
 
 /*FOOTER*/
-.footer {
+.footer,
+.footer[class*="span"] {
+  min-height: 75vh;
   background: var(--darkblue); }
+.footer h3,
+.footer[class*="span"] h3 {
+  letter-spacing: .05em; }
+.footer img {
+  width: 150px;
+  height: auto;
+  margin: 0 auto; }

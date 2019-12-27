@@ -70,19 +70,32 @@ function parallaxPinner(trigger, target, hook, dur) {
 
 /*======================================
  * =====================================
+ * ======= ANIMATION FUNCTIONS =========
+ * =====================================
+ * ==================================*/
+
+
+/*======================================
+ * =====================================
  * =========== INITIALIZER =============
  * =====================================
  * ==================================*/
+var scrollInit = function eventlInit() {
+  $(window).scroll(function() {
+    isActive($(".rewarding__bars"), $("#rewardingGraphTrigger")) 
+  });
+};
+var clickInit = function clickInit() {
+  $(".numbers__icon--item").click(function() {
+    swapActive( this, ".numbers__selected", "item", "selected" )
+  });
+};
 (function init() {
-  var eventInit = (function eventlInit() {
-    $(window).scroll(function() {
-      isActive($(".rewarding__bars"), $("#rewardingGraphTrigger"));
-    });
-    $(".numbers__icon--item").click(function() {
-      swapActive( this, ".numbers__selected", "item", "selected" )
-    });
-  })();
   var domInit = {
+    events: {
+      0: scrollInit(),
+      1: clickInit()
+    },
     custom: {
       0: $("#selected1").parent().parent().addClass("active"),
       1: $("#item1").addClass("active")

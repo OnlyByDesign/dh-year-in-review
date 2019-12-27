@@ -41,6 +41,7 @@ body {
 /*=====================HERO======================*/
 .hero {
   height: 100vh;
+  margin-top: -2.5rem;
   border-radius: 0 0 500px 0;
   background: linear-gradient(0deg,rgba(0,116,192, 0.95),rgba(51,172,245, .75)),url('https://cdn2.hubspot.net/hubfs/5213739/2019%20Year%20in%20Review%20Landing%20Page/Yea%20in%20review%202019%20-%20quick%20mockup%20(1).jpg');
   background-size: cover;
@@ -363,10 +364,11 @@ body {
   pointer-events: none; }
 .stand__copy,
 .stand .stand__copy {
-  width: 400px;
+  width: 425px;
   font-size: 20px;
-  padding-top: 0.25rem;
+  padding-top: .25rem;
   line-height: 34px;
+  letter-spacing: 2px;
   text-align: center; }
 #standPinTrigger {
   position: absolute;
@@ -385,19 +387,56 @@ body {
   color: var(--darkblue); }
 .message__focus, 
 .message .message__focus[class*="span"] {
-  max-width: 85%;
+  width: 80%;
+  position: relative;
   margin: 0 auto;
+  margin-bottom: 8rem;
   float: none; }
 .message__body {
+  width: 75%;
   padding: 3rem; } 
-.message__copy, 
-.message .message__copy[class*="span"] {
-  width: 80%; }
+.message__identity {
+  padding-bottom: 1.5rem; }
+.message__identity h4 {
+  font-weight: 700; }
+.message__identity h4, 
+.message__identity h6 {
+  text-align: left; }
+.message__body, 
+.message .message__body[class*="span"] {
+  z-index: 1;
+  background: var(--lightgrey); }
+.message .message__copy {
+  min-height: 250px; }
+.left .message__body,
+.left .message__identity,
+.left .message__copy,
+.left .message__image {
+  margin-left: auto;
+  left: 0; }
+.right .message__body,
+.right .message__identity,
+.right .message__copy,
+.right .message__image {
+  margin-right: auto;
+  right: 0; }
+.message__body, 
+.message__body[class*="body"],
+.message__identity,
+.message__identity[class*="span"],
+.message__copy,
+.message__copy[class*="span"] {
+  width: 82.5%; }
 .message__image, 
 .message .message__image[class*="span"] {
+  position: absolute;
+  width: 25vw;
+  height: 25vw;
+  object-fit: cover;
+  border-radius: 50%;
   padding: 0;
   margin: 0;
-  width: auto; }
+  z-index: 2; }
 .message .message__image.right[class*="span"] {
   margin-left: -5rem; }
 .message .message__image.left[class*="span"] {
@@ -405,12 +444,6 @@ body {
 .message__image img {
   min-width: 400px;
   border-radius: 50%; }
-.message__identity h4, 
-.message__identity span {
-  text-align:left; }
-.message__body, 
-.message .message__body[class*="span"] {
-  background: var(--lightgrey); }
 
 
 

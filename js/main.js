@@ -34,13 +34,26 @@ $.fn.isOnScreen = function() {
  * ==================================*/
 var navActive = function navActive() {
   $(window).scrollTop() > 100 ? $('.header').addClass('active') : $('.header').removeClass('active');
-}; // This changes the nav after 100px of scrolling | adds 'active' class
+};
 
- $(window).scroll(function() {
-    if ($(window).scrollTop() < 200) navActive();
- });
-
+/*======================================
+ * =====================================
+ * ============ INITIALIZER ============
+ * =====================================
+ * ==================================*/
 (function init() {
-  navActive();
-  console.log("Init main: " + new Date().toUTCString());
+  var eventInit = (function eventlInit() {
+    $(window).scroll(function() {
+      if ($(window).scrollTop() < 200) navActive();
+      isActive($(".rewarding__bars"), $("#rewardingGraphTrigger"));
+    });
+  })();
+  var domInit = {
+    0: navActive()
+  };
+  console.log("Main: " + new Date().toUTCString());
 })(); // Initializer for main.js
+
+
+
+
