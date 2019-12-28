@@ -45,7 +45,6 @@ var navActive = function navActive() {
   var eventInit = (function eventlInit() {
     $(window).scroll(function() {
       if ($(window).scrollTop() < 200) navActive();
-      isActive($(".rewarding__bars"), $("#rewardingGraphTrigger"));
     });
   })();
   var domInit = {

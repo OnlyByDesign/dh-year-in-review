@@ -82,7 +82,7 @@ function parallaxPinner(trigger, target, hook, dur) {
  * ==================================*/
 var scrollInit = function eventlInit() {
   $(window).scroll(function() {
-    isActive($(".rewarding__bars"), $("#rewardingGraphTrigger")) 
+    isActive($(".rewarding__bars"), $("#rewardingGraphTrigger")); 
   });
 };
 var clickInit = function clickInit() {
@@ -90,6 +90,11 @@ var clickInit = function clickInit() {
     swapActive( this, ".numbers__selected", "item", "selected" )
   });
 };
+var baseInit = function baseInit() {
+  $("#selected1").parent().parent().addClass("active");
+  $("#item1").addClass("active");
+};
+
 (function init() {
   var domInit = {
     events: {
@@ -97,11 +102,10 @@ var clickInit = function clickInit() {
       1: clickInit()
     },
     custom: {
-      0: $("#selected1").parent().parent().addClass("active"),
-      1: $("#item1").addClass("active")
+      0: baseInit()
     }
   };
-  var parallaxInit = {
+  var interactionInit = {
     rewardInit: {
       0: parallaxScroll( $("#rewardingParallax1"), -500, 0, 1, 200 ),
       1: parallaxScroll( $("#rewardingParallax2"), -250, 0, 1, 200 )
@@ -110,14 +114,25 @@ var clickInit = function clickInit() {
       0: parallaxScroll( $("#mentalParallax0"), 0, -50, 1, 200 ),
       1: parallaxScroll( $("#mentalParallax1"), 0, -100, 1, 200 ),
       2: parallaxScroll( $("#mentalParallax2"), 0, 200, 1, 250 ),
-      3: parallaxScroll( $("#mentalParallax3"), 0, -300, 1, 300 )
+      3: parallaxScroll( $("#mentalParallax3"), 0, -300, 1, 300 ),
+      //4: parallaxPinner( $("#mentalFocus"), $("#mentalFocus"), 1, 200 )
     },
     innovationInit: {
       0: parallaxScroll( $("#innovationBgL"), -200, 0, 1, 200 ),
       1: parallaxScroll( $("#innovationBgR"), -500, 0, 1, 200 )
     },
+    testimonialInit: {
+      0: bamboo(document.getElementById("testimonialSlider"))
+    },
+    lifeInit: {
+      0: bamboo(document.getElementById("lifeSlider"))
+    },
     standInit: {
-      0: parallaxPinner( $("#standFor"), $("#standForFocus"), 0, 200 )
+      0: parallaxPinner( $("#standForFocus1"), $("#standForFocus1"), 0, 100 ),
+      1: parallaxPinner( $("#standForFocus2"), $("#standForFocus2"), 0, 100 ),
+      2: parallaxPinner( $("#standForFocus3"), $("#standForFocus3"), 0, 100 ),
+      3: parallaxPinner( $("#standForFocus4"), $("#standForFocus4"), 0, 100 ),
+      4: parallaxPinner( $("#standForFocus5"), $("#standForFocus5"), 0, 100 )
     }
   };
   console.log("Interaction: " + new Date().toUTCString());
