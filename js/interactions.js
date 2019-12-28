@@ -114,8 +114,15 @@ var baseInit = function baseInit() {
       0: parallaxScroll( $("#mentalParallax0"), 0, -50, 1, 200 ),
       1: parallaxScroll( $("#mentalParallax1"), 0, -100, 1, 200 ),
       2: parallaxScroll( $("#mentalParallax2"), 0, 200, 1, 250 ),
-      3: parallaxScroll( $("#mentalParallax3"), 0, -300, 1, 300 ),
-      //4: parallaxPinner( $("#mentalFocus"), $("#mentalFocus"), 1, 200 )
+      3: parallaxScroll( $("#mentalParallax3"), 0, -300, 1, 300 )
+    },
+    securityInit: {
+      0: parallaxScroll( $("#securityBg1"), 100, -20, 1, 200 ),
+      1: parallaxScroll( $("#securityBg2"), -100, 20, 1, 200 ),
+      2: parallaxScroll( $("#securityBg3"), 100, -40, 1, 200 ),
+      3: parallaxScroll( $("#securityBg4"), 100, 0, 1, 200 ),
+      4: parallaxScroll( $("#securityBg5"), -100, -20, 1, 200 ),
+      5: parallaxScroll( $("#securityBg6"), 100, 30, 1, 200 ),
     },
     innovationInit: {
       0: parallaxScroll( $("#innovationBgL"), -200, 0, 1, 200 ),
@@ -132,7 +139,9 @@ var baseInit = function baseInit() {
       1: parallaxPinner( $("#standForFocus2"), $("#standForFocus2"), 0, 100 ),
       2: parallaxPinner( $("#standForFocus3"), $("#standForFocus3"), 0, 100 ),
       3: parallaxPinner( $("#standForFocus4"), $("#standForFocus4"), 0, 100 ),
-      4: parallaxPinner( $("#standForFocus5"), $("#standForFocus5"), 0, 100 )
+      4: parallaxPinner( $("#standForFocus5"), $("#standForFocus5"), 0, 100 ),
+      5: parallaxPinner( $("#standForFocus6"), $("#standForFocus6"), 0, 100 ),
+      6: parallaxPinner( $("#standForFocus7"), $("#standForFocus7"), 0, 100 )
     }
   };
   console.log("Interaction: " + new Date().toUTCString());

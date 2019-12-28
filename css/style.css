@@ -43,7 +43,7 @@ body {
   height: 100vh;
   margin-top: -2.5rem;
   border-radius: 0 0 500px 0;
-  background: linear-gradient(0deg,rgba(0,116,192, 0.95),rgba(51,172,245, .75)),url('https://cdn2.hubspot.net/hubfs/5213739/2019%20Year%20in%20Review%20Landing%20Page/Yea%20in%20review%202019%20-%20quick%20mockup%20(1).jpg');
+  background: linear-gradient(0deg,rgba(0,116,192, 1),rgba(51,172,245, .75)),url('https://cdn2.hubspot.net/hubfs/5213739/2019%20Year%20in%20Review%20Landing%20Page/Yea%20in%20review%202019%20-%20quick%20mockup%20(1).jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed; }
@@ -282,6 +282,7 @@ body {
 /*=====================SECURITY===============*/
 .security,
 .security[class*="span"] {
+  overflow: hidden;
   background: var(--darkblue); }
 .security .main__title h2 {
   color: var(--yellow); }
@@ -292,6 +293,7 @@ body {
   height: 160px; }
 .security .security__background {
   width: 110%;
+  height: 100%;
   position: absolute;
   top: 0;
   right: 0;
@@ -300,9 +302,28 @@ body {
   text-align: center;
   z-index: 0;
   pointer-events: none; }
-.security .security__background img {
-  object-fit: cover;
-  height: 100%; }
+.security__background--item {
+  position: relative;
+  width: 30%;
+  height: 100%;
+  vertical-align: top;
+  text-align: center;
+  margin:0 auto; }
+.security__background--left {
+  float: left; }
+.security__background--right {
+  float: right; }
+.security__background--item div {
+  position: absolute;
+  opacity: 0.2; }
+/*.security__background--item div svg * {
+  stroke: var(--orange) !important; }*/
+#securityBg1 { top:-17vh; left:2vw; }
+#securityBg2 { top:35vh; left:5vw; }
+#securityBg3 { top:60vh; }
+#securityBg4 { top:-7vh; right:5vw; }
+#securityBg5 { top:8vh; left:0; }
+#securityBg6 { top:15vh; }
 
 /*=====================INNOVATION===============*/
 .innovation,
@@ -367,7 +388,7 @@ body {
 /*=====================STAND======================*/
 .stand,
 .stand[class*="span"] {
-  height: 1010vh;
+  height: 1410vh;
   background: var(--midblue); }
 .stand .stand__main {
   position: absolute; }
@@ -403,7 +424,11 @@ body {
 #standForFocus5 h2 { color:var(--darkblue); }
 #standForFocus5 .stand__copy { color:black; }
 
+#standForFocus6 {  }
+#standForFocus6 h2 { color:var(--yellow); }
+
 #standForFocus7 { background:var(--darkblue); }
+#standForFocus7 h2 { color:var(--lightblue); }
 
 /*=====================MESSAGE======================*/
 .message {
