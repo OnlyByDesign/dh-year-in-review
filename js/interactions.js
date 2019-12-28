@@ -80,6 +80,10 @@ function parallaxPinner(trigger, target, hook, dur) {
  * =========== INITIALIZER =============
  * =====================================
  * ==================================*/
+var baseInit = function baseInit() {
+  $("#selected1").parent().parent().addClass("active");
+  $("#item1").addClass("active");
+};
 var scrollInit = function eventlInit() {
   $(window).scroll(function() {
     isActive($(".rewarding__bars"), $("#rewardingGraphTrigger")); 
@@ -90,10 +94,6 @@ var clickInit = function clickInit() {
     swapActive( this, ".numbers__selected", "item", "selected" )
   });
 };
-var baseInit = function baseInit() {
-  $("#selected1").parent().parent().addClass("active");
-  $("#item1").addClass("active");
-};
 
 (function init() {
   var domInit = {
@@ -101,9 +101,7 @@ var baseInit = function baseInit() {
       0: scrollInit(),
       1: clickInit()
     },
-    custom: {
-      0: baseInit()
-    }
+    custom: baseInit()
   };
   var interactionInit = {
     rewardInit: {
@@ -115,18 +113,20 @@ var baseInit = function baseInit() {
       1: parallaxScroll( $("#mentalParallax1"), 0, -100, 1, 200 ),
       2: parallaxScroll( $("#mentalParallax2"), 0, 200, 1, 250 ),
       3: parallaxScroll( $("#mentalParallax3"), 0, -300, 1, 300 )
+      //4: parallaxPinner( $("#mentalFocus"), $("#mentalFocus"), 0.5, 100 )
     },
     securityInit: {
-      0: parallaxScroll( $("#securityBg1"), 100, -20, 1, 200 ),
-      1: parallaxScroll( $("#securityBg2"), -100, 20, 1, 200 ),
-      2: parallaxScroll( $("#securityBg3"), 100, -40, 1, 200 ),
+      0: parallaxScroll( $("#securityBg1"), 100, -50, 1, 200 ),
+      1: parallaxScroll( $("#securityBg2"), -100, 50, 1, 200 ),
+      2: parallaxScroll( $("#securityBg3"), 100, -50, 1, 200 ),
       3: parallaxScroll( $("#securityBg4"), 100, 0, 1, 200 ),
-      4: parallaxScroll( $("#securityBg5"), -100, -20, 1, 200 ),
-      5: parallaxScroll( $("#securityBg6"), 100, 30, 1, 200 ),
+      4: parallaxScroll( $("#securityBg5"), -100, -50, 1, 200 ),
+      5: parallaxScroll( $("#securityBg6"), 100, 50, 0, 200 ),
     },
     innovationInit: {
-      0: parallaxScroll( $("#innovationBgL"), -200, 0, 1, 200 ),
-      1: parallaxScroll( $("#innovationBgR"), -500, 0, 1, 200 )
+      0: parallaxScroll( $("#innovationBgL"), -500, 0, 1, 200 ),
+      1: parallaxScroll( $("#innovationBgR"), -1000, 0, 1, 200 ),
+      2: parallaxPinner( $("#innovationFocus"), $("#innovationFocus"), 0.25, 100 )
     },
     testimonialInit: {
       0: bamboo(document.getElementById("testimonialSlider"))

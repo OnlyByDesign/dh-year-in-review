@@ -260,14 +260,16 @@ body {
   text-align: center;
   z-index: 1; } 
 .mental .mental__foreground div.mental__image--spacer {
-  height: 10rem; }
+  height: 5rem; }
+.mental .mental__focus {  }
 .mental .mental__foreground img.mental__image--fg {
-  max-height: 50vh; }
+  width: 500px;
+  margin: 0 auto;
+  text-align: center; }
 .mental .mental__background {
-  max-height: 50%;
   position: absolute;
   left: 0;
-  bottom: 2%;
+  bottom: -15%;
   z-index: 0;
   pointer-events: none; }
 .mental .mental__background img {
@@ -328,16 +330,16 @@ body {
 /*=====================INNOVATION===============*/
 .innovation,
 .innovation[class*="span"] {
-  max-height: 105vh;
+  height: 200vh;
+  padding-bottom: 0;
   background: transparent; }
 .innovation .main__title h2 {
   color: var(--darkblue); }
 .innovation .innovation__phone {
   margin-bottom: 0;
   text-align: center; }
-.innovation .innovation__copy,
-.innovation .innovation__copy .main__copy {
-  margin-left: -7%; }
+.innovation .innovation__phone img {
+  box-shadow: 0px 80px 45px 6px #666; }
 .innovation .innovation__point--item {
   padding: 3% 0 0 0;
   height: 0;
@@ -363,6 +365,8 @@ body {
 .innovation .innovation__point--item p {
   line-height: 26px;
   width: 85%; }
+.innovation .innovation__focus {
+  height: 50% !important; }
 .innovation .innovation__background {
   position: absolute;
   width: 100%;
@@ -372,7 +376,7 @@ body {
   pointer-events: none; }
 .innovation__bg--item {
   position: absolute; }
-.innovation__bg--left { width:30vw; left:-7vw; top:1vh; }
+.innovation__bg--left { width:25vw; left:-7vw; top:30vh; }
 .innovation__bg--right { width:42vw; right:-12vw; bottom:-77vh; }
 
 /*=====================TESTIMONIALS===============*/
