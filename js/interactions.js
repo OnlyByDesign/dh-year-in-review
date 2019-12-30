@@ -32,6 +32,30 @@ var swapActive = function swapActive(el, target, value1, value2) {
 
 /*======================================
  * =====================================
+ * ======= ANIMATION FUNCTIONS =========
+ * =====================================
+ * ==================================*/
+function revealInnovation() {
+  //var innovationTriggers = ["#innovation4Trigger","#innovation5Trigger","#innovation6Trigger"];
+  //var innovationSections = ["#innovation1","#innovation2","#innovation3","#innovation4","#innovation5","#innovation6"];
+  isActive($("#innovation4Trigger"), $("#innovation4").children());
+  isActive($("#innovation5Trigger"), $("#innovation5").children());
+  isActive($("#innovation6Trigger"), $("#innovation6").children());
+  if ($("#innovationBest")[0].classList.contains("active")) {
+    if ($("#innovation4")[0].classList.contains("active")) {
+      $("#innovation1")[0].classList.remove("active");
+    };
+    if ($("#innovation5")[0].classList.contains("active")) {
+      $("#innovation2")[0].classList.remove("active");
+    };
+    if ($("#innovation6")[0].classList.contains("active")) {
+      $("#innovation3")[0].classList.remove("active");
+    };
+  };
+};
+
+/*======================================
+ * =====================================
  * ======== PARALLAX FUNCTIONS =========
  * =====================================
  * ==================================*/
@@ -70,13 +94,6 @@ function parallaxPinner(trigger, target, hook, dur) {
 
 /*======================================
  * =====================================
- * ======= ANIMATION FUNCTIONS =========
- * =====================================
- * ==================================*/
-
-
-/*======================================
- * =====================================
  * =========== INITIALIZER =============
  * =====================================
  * ==================================*/
@@ -86,7 +103,10 @@ var baseInit = function baseInit() {
 };
 var scrollInit = function eventlInit() {
   $(window).scroll(function() {
+    isActive($(".fueling__fg"), $(".fueling__bg")); 
     isActive($(".rewarding__bars"), $("#rewardingGraphTrigger")); 
+    isActive($("#innovationBest"), $("#innovationBest").children());
+    revealInnovation();
   });
 };
 var clickInit = function clickInit() {
@@ -113,7 +133,6 @@ var clickInit = function clickInit() {
       1: parallaxScroll( $("#mentalParallax1"), 0, -100, 1, 200 ),
       2: parallaxScroll( $("#mentalParallax2"), 0, 200, 1, 250 ),
       3: parallaxScroll( $("#mentalParallax3"), 0, -300, 1, 300 )
-      //4: parallaxPinner( $("#mentalFocus"), $("#mentalFocus"), 0.5, 100 )
     },
     securityInit: {
       0: parallaxScroll( $("#securityBg1"), 100, -50, 1, 200 ),
@@ -121,18 +140,36 @@ var clickInit = function clickInit() {
       2: parallaxScroll( $("#securityBg3"), 100, -50, 1, 200 ),
       3: parallaxScroll( $("#securityBg4"), 100, 0, 1, 200 ),
       4: parallaxScroll( $("#securityBg5"), -100, -50, 1, 200 ),
-      5: parallaxScroll( $("#securityBg6"), 100, 50, 0, 200 ),
+      5: parallaxScroll( $("#securityBg6"), 100, 50, 0, 200 )
     },
     innovationInit: {
       0: parallaxScroll( $("#innovationBgL"), -500, 0, 1, 200 ),
-      1: parallaxScroll( $("#innovationBgR"), -1000, 0, 1, 200 ),
-      2: parallaxPinner( $("#innovationFocus"), $("#innovationFocus"), 0.25, 100 )
+      1: parallaxScroll( $("#innovationBgR"), -500, 0, 1, 200 ),
+      2: parallaxPinner( $("#innovationFocus"), $("#innovationFocus"), 0.25, 300 )
     },
     testimonialInit: {
-      0: bamboo(document.getElementById("testimonialSlider"))
+      0: bamboo(document.getElementById("testimonialSlider"), {
+          autoPlay: false,
+          timeout: 999999999999999999999999999,
+          speed: 9999999999999999999999999999,
+          hideDot: false,
+          hideArrow: false,
+          prev: document.querySelector('.prev'),
+          next: document.querySelector('.next'),
+          dots: document.querySelector('.dots')
+      })
     },
     lifeInit: {
-      0: bamboo(document.getElementById("lifeSlider"))
+      0: bamboo(document.getElementById("lifeSlider"), {
+          autoPlay: false,
+          timeout: 999999999999999999999999999,
+          speed: 9999999999999999999999999999,
+          hideDot: false,
+          hideArrow: false,
+          prev: document.querySelector('.prev'),
+          next: document.querySelector('.next'),
+          dots: document.querySelector('.dots')
+      })
     },
     standInit: {
       0: parallaxPinner( $("#standForFocus1"), $("#standForFocus1"), 0, 100 ),
@@ -145,7 +182,8 @@ var clickInit = function clickInit() {
     }
   };
   console.log("Interaction: " + new Date().toUTCString());
-})(); 
+})();
+				
   
   
   
