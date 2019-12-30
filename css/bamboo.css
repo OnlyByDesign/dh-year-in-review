@@ -18,24 +18,35 @@
     overflow: hidden;
     box-sizing: border-box;
 }
-  
 
-.bamboo>.bamboo-dots {
+.bamboo .bamboo-navigation {
     position: absolute;
-    z-index: 5;
-    bottom: 5%;
-    left: 50%;
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-    transform: translateX(-50%);
+    bottom: 15%;
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    right: 0;
+    left: 0; 
 }
 
-.bamboo>.bamboo-dots>* {
-    float: left;
-    width: 10px;
-    height: 10px;
-    margin: 2px 6px;
+.bamboo .bamboo-dots {
+    position: absolute;
+    z-index: 5;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0px;
+    list-style: none;
+}
+
+.bamboo .bamboo-dots * {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 5px;
     transition: 0.4s ease;
     vertical-align: middle;
     border-radius: 50%;
@@ -43,44 +54,40 @@
     cursor: pointer;
 }
 
-.bamboo>.bamboo-dots>*:hover {
-    background: rgba(255, 0, 0, 0.6);
+.bamboo .bamboo-dots *:hover {
+    background: var(--darkblue);
 }
 
-.bamboo>.bamboo-dots>*.focus {
-    background: rgba(255, 0, 0, 0.6);
+.bamboo .bamboo-dots *.focus {
+    background: var(--darkblue);
 }
 
-.bamboo>.bamboo-prev {
+.bamboo .bamboo-prev {
     position: absolute;
     z-index: 5;
-    top: 48%;
-    left: 0;
-    width: 20px;
-    height: 30px;
-    transform: translateY(-50%);
-    opacity: 0.9;
-    background-color: rgba(0, 0, 0, .4);
+    left: 20%;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    background-color: transparent;
     background-repeat: no-repeat;
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAYBAMAAAA46dFkAAAAIVBMVEUAAAD////////////////////////////////////////PIev5AAAACnRSTlMAENBgILDw38AwqDDuigAAACpJREFUCNdjAAOhFDDFqLUEwl1lAOEuJpvLEAXkQmm4OEwd5QIrIQISJQCMdBRInmiflAAAAABJRU5ErkJggg==');
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4Mi44MjgiIGhlaWdodD0iNDUuNjU3IiB2aWV3Qm94PSIwIDAgODIuODI4IDQ1LjY1NyI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTYxLjMyOCA4MDAyLjMyOSkgcm90YXRlKDE4MCkiPjxsaW5lIHgyPSI3NSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODAuNSA3OTc5LjUpIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDc0YzAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI0Ii8+PGxpbmUgeTE9IjIwIiB4Mj0iMjAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEzOC41IDc5NzkuNSkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwNzRjMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utd2lkdGg9IjQiLz48bGluZSB4Mj0iMjAiIHkyPSIyMCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTM4LjUgNzk1OS41KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDA3NGMwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS13aWR0aD0iNCIvPjwvZz48L3N2Zz4=");
     background-position: 50% 48%;
-    background-size: 6px;
+    background-size: 80px;
 }
 
-.bamboo>.bamboo-next {
+.bamboo .bamboo-next {
     position: absolute;
     z-index: 5;
-    top: 48%;
-    right: 0;
-    width: 20px;
-    height: 30px;
-    transform: translateY(-50%);
-    opacity: 0.9;
-    background-color: rgba(0, 0, 0, .4);
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAYBAMAAAA46dFkAAAAIVBMVEUAAAD////////////////////////////////////////PIev5AAAACnRSTlMAENBgILDw38AwqDDuigAAAClJREFUCNdjcG9kAINZiwTANPMqRYiAFTUElsJomDhMHdlcL6gdbhAuAPqSFKIdy8kGAAAAAElFTkSuQmCC');
+    right: 20%;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4Mi44MjgiIGhlaWdodD0iNDUuNjU3IiB2aWV3Qm94PSIwIDAgODIuODI4IDQ1LjY1NyI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTc4LjUgLTc5NTYuNjcxKSI+PGxpbmUgeDI9Ijc1IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4MC41IDc5NzkuNSkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwNzRjMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utd2lkdGg9IjQiLz48bGluZSB5MT0iMjAiIHgyPSIyMCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTM4LjUgNzk3OS41KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDA3NGMwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS13aWR0aD0iNCIvPjxsaW5lIHgyPSIyMCIgeTI9IjIwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzguNSA3OTU5LjUpIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDc0YzAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI0Ii8+PC9nPjwvc3ZnPg==");
     background-repeat: no-repeat;
     background-position: 50% 48%;
-    background-size: 6px;
+    background-size: 80px;
 }
 
 .bamboo.roll {
@@ -115,7 +122,6 @@
 
 .bamboo.fade>.slides>* {
     position: absolute;
-  height: 100vh !important;
     top: 0;
     left: 0;
     transition: opacity 0.6s;
