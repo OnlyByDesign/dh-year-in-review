@@ -130,7 +130,7 @@ var bamboo = (function(){
                 hideArrow: p.hideArrow !== undefined ? p.hideArrow : false,
 
                 width: p.width !== undefined ? p.width : slideshowElement.clientWidth,
-                height: p.height !== undefined ? p.height : slideshowElement.clientHeight,
+                height: p.offsetHeight !== undefined ? p.offsetHeight : slideshowElement.clientHeight,
                 backgroundColor: p.backgroundColor,
                 index: p.index !== undefined ? p.index : 0,
                 vertical: p.vertical !== undefined ? p.vertical : false,
@@ -153,7 +153,7 @@ var bamboo = (function(){
                 }
 
                 // slide automatically resize when the container changes size
-                resizeDetect(this.slideshowElement, function(){
+                resizeDetect(this.slideshowElement, function() {
                     _this.resetSlideSize(); 
                     if (_this.autoFitImg) {
                         _this.fitImg();
@@ -162,6 +162,13 @@ var bamboo = (function(){
 
                 this.slideList = this.slidesElement.children;
                 addClass(this.slideshowElement, 'bamboo');
+              
+                if (!this.dots) {
+                  this.nav = document.createElement('div');
+                  addClass(this.nav, 'bamboo-navigation');
+                  this.slideshowElement.appendChild(this.nav);
+                }
+              
                 // dots
                 if (!this.dotsElement) {
                     // create a navigation button
@@ -173,9 +180,9 @@ var bamboo = (function(){
                         dotsEelement.appendChild(dotElement);
                     }
                     this.dotsElement = dotsEelement;
-                    // if (this.showDot) {
                     if (!this.hideDot) {
-                        this.slideshowElement.appendChild(this.dotsElement);
+                        //this.slideshowElement.appendChild(this.dotsElement);
+                        $(this.slideshowElement).find("div.bamboo-navigation")[0].appendChild(this.dotsElement);
                     }
                 }
                 this.dots = this.dotsElement.children;
@@ -185,7 +192,8 @@ var bamboo = (function(){
                     this.prev = document.createElement('i');
                     addClass(this.prev, 'bamboo-prev');
                     if (!this.hideArrow) {
-                        this.slideshowElement.appendChild(this.prev);
+                        //this.slideshowElement.appendChild(this.prev);
+                        $(this.slideshowElement).find("div.bamboo-navigation")[0].appendChild(this.prev)
                     }
                 }
                 if (!this.next) {
@@ -193,7 +201,8 @@ var bamboo = (function(){
                     this.next = document.createElement('i');
                     addClass(this.next, 'bamboo-next');
                     if (!this.hideArrow) {
-                        this.slideshowElement.appendChild(this.next);
+                        //this.slideshowElement.appendChild(this.next);
+                        $(this.slideshowElement).find("div.bamboo-navigation")[0].appendChild(this.next);
                     }
                 }
                 
@@ -202,7 +211,7 @@ var bamboo = (function(){
                     var slide = this.slideList[i];
                     addClass(slide, 'slide');
                     slide.style.width = this.width + 'px';
-                    slide.style.height = this.height + 'px';
+                    slide.style.offsetHeight = this.offsetHeight + 'px';
                 }
 
                 // nav init
@@ -268,7 +277,7 @@ var bamboo = (function(){
                     this.width = this.slideshowElement.clientWidth;
                     this.height = this.slideshowElement.clientHeight;
                     slide.style.width = this.width + 'px';
-                    slide.style.height = this.height + 'px';
+                    slide.style.height = this.offsetHeight + 'px';
                 }                
             };
 
