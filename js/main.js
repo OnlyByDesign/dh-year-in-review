@@ -94,9 +94,9 @@ function parallaxPinner(trigger, target, hook, dur) {
 function revealInnovation() {
   //var innovationTriggers = ["#innovation4Trigger","#innovation5Trigger","#innovation6Trigger"];
   //var innovationSections = ["#innovation1","#innovation2","#innovation3","#innovation4","#innovation5","#innovation6"];  
-  isActive($("#innovation4Trigger"), $("#innovation4").children());
-  isActive($("#innovation5Trigger"), $("#innovation5").children());
-  isActive($("#innovation6Trigger"), $("#innovation6").children());
+  isActive( $("#innovation4Trigger"), $("#innovation4").children() );
+  isActive( $("#innovation5Trigger"), $("#innovation5").children() );
+  isActive( $("#innovation6Trigger"), $("#innovation6").children() );
   if ($("#innovationBest")[0].classList.contains("active")) {
     if ($("#innovation4")[0].classList.contains("active")) {
       $("#innovation1")[0].classList.remove("active");

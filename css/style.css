@@ -7,7 +7,9 @@ body {
   min-height: 100vh;
   padding: 6rem 0 7rem 0;
   position: relative; }
-.main__title--group {
+.main__title--group,
+.main__title--group[class*="span"],
+.main__title--group[class*="span"]:first-child {
   padding-bottom: 6rem; }
 .light h3, 
 .light h4, 
@@ -23,8 +25,14 @@ body {
 .dark span, 
 .dark ul li {
   color: white; }
-.main__subtitle {
-  padding-top: .75rem; }
+.main__subtitle,
+.main__subtitle[class*="span"],
+.main__subtitle[class*="span"]:first-child {
+  padding-top: .75rem;
+  max-width: 80%;
+  margin: 0 auto;
+  float: none;
+  line-height: 34px; }
 .main__copy, 
 .main__copy[class*="span"], 
 .row-fluid .main__copy[class*="span"]:first-child {
@@ -491,7 +499,7 @@ body {
   right: 20%;
   top: unset;
   bottom: 5%; }
-.testimonial__icon.fit-img {
+.testimonial__icon {
   position: absolute;
   height: 400px !important;
   width: 400px !important;
@@ -507,6 +515,9 @@ body {
   vertical-align: top;
   z-index: 0;
   pointer-events: none; }
+.testimonial__icon img.fit-img {
+  object-fit: none;
+  top: 35% !important; }
 
 /*=====================LIFE======================*/
 .life,
@@ -565,12 +576,15 @@ body {
 /*=====================STAND======================*/
 .stand,
 .stand[class*="span"] {
-  height: 1410vh;
+  height: 1450vh;
   background: var(--midblue); }
-.stand .stand__main {
-  position: absolute; }
 .stand .main__title h2 {
   color: var(--yellow); }
+.stand .main__copy h5,
+.stand .main__copy h6 {
+  display: inline-block; }
+.stand .main__copy h6 {
+  color: white; }
 .stand__focus {
   height: 100vh;
   position: relative;
@@ -584,7 +598,9 @@ body {
   line-height: 34px;
   letter-spacing: 2px;
   text-align: center; }
-#standForFocus1 { }
+/*#standForFocus1 { background:var(--lightblue); }
+#standForFocus1 h2 { color:var(--darkblue); }
+#standForFocus1 .stand__copy { color:black; }*/
 
 #standForFocus2 { background:var(--orange); }
 #standForFocus2 h2 { color:var(--darkblue); }
@@ -625,10 +641,12 @@ body {
 .message__identity {
   padding-bottom: 1.5rem; }
 .message__identity h4 {
-  font-weight: 700; }
+  font-weight: 700;
+  padding-bottom: 5px; }
 .message__identity h4, 
 .message__identity h6 {
-  text-align: left; }
+  text-align: left;
+  letter-spacing: 1.5px; }
 .message__body, 
 .message .message__body[class*="span"] {
   z-index: 1;
