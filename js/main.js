@@ -127,6 +127,13 @@ var clickInit = function clickInit() {
   $(".numbers__icon--item").click(function() {
     swapActive( this, ".numbers__selected", "item", "selected" )
   });
+  $(".header__nav ul li a").click(function(event) {
+    event.preventDefault();
+    if (!$(this).hasClass("active")) $(this).addClass("active");
+    $("html, body").animate({
+        scrollTop: $($.attr(this, "href")).offset().top
+    }, 500);
+  });
 };
 var baseInit = function baseInit() {
   navActive();
