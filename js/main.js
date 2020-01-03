@@ -92,8 +92,8 @@ function parallaxPinner(trigger, target, hook, dur) {
 	})();
 };
 function revealInnovation() {
-  var innovationTriggers = ["#innovation4Trigger","#innovation5Trigger","#innovation6Trigger"];
-  var innovationSections = ["#innovation1","#innovation2","#innovation3","#innovation4","#innovation5","#innovation6"];
+  //var innovationTriggers = ["#innovation4Trigger","#innovation5Trigger","#innovation6Trigger"];
+  //var innovationSections = ["#innovation1","#innovation2","#innovation3","#innovation4","#innovation5","#innovation6"];  
   isActive($("#innovation4Trigger"), $("#innovation4").children());
   isActive($("#innovation5Trigger"), $("#innovation5").children());
   isActive($("#innovation6Trigger"), $("#innovation6").children());
@@ -129,7 +129,7 @@ var clickInit = function clickInit() {
   });
 };
 var baseInit = function baseInit() {
-  navActive()
+  navActive();
   $("#selected1").parent().parent().addClass("active");
   $("#item1").addClass("active");
 };
@@ -162,9 +162,9 @@ var baseInit = function baseInit() {
       5: parallaxScroll( $("#securityBg6"), 100, 50, 0, 200 )
     },
     innovationInit: {
-      0: parallaxScroll( $("#innovationBgL"), -500, 0, 1, 200 ),
+      0: parallaxScroll( $("#innovationBgL"), -250, 0, 1, 200 ),
       1: parallaxScroll( $("#innovationBgR"), -500, 0, 1, 200 ),
-      2: parallaxPinner( $("#innovationFocus"), $("#innovationFocus"), 0.25, 300 )
+      2: parallaxPinner( $("#innovationFocus"), $("#innovationFocus"), 0.2, 300 )
     },
     testimonialInit: {
       0: bamboo(document.getElementById("testimonialSlider"), {
@@ -191,19 +191,18 @@ var baseInit = function baseInit() {
       })
     },
     standInit: {
-      0: parallaxPinner( $("#standForFocus1"), $("#standForFocus1"), 0, 100 ),
-      1: parallaxPinner( $("#standForFocus2"), $("#standForFocus2"), 0, 100 ),
-      2: parallaxPinner( $("#standForFocus3"), $("#standForFocus3"), 0, 100 ),
-      3: parallaxPinner( $("#standForFocus4"), $("#standForFocus4"), 0, 100 ),
-      4: parallaxPinner( $("#standForFocus5"), $("#standForFocus5"), 0, 100 ),
-      5: parallaxPinner( $("#standForFocus6"), $("#standForFocus6"), 0, 100 ),
-      6: parallaxPinner( $("#standForFocus7"), $("#standForFocus7"), 0, 100 )
+      0: parallaxPinner( $("#standForFocus0"), $("#standForFocus0"), 0, 100 ),
+      1: parallaxPinner( $("#standForFocus1"), $("#standForFocus1"), 0, 100 ),
+      2: parallaxPinner( $("#standForFocus2"), $("#standForFocus2"), 0, 100 ),
+      3: parallaxPinner( $("#standForFocus3"), $("#standForFocus3"), 0, 100 ),
+      4: parallaxPinner( $("#standForFocus4"), $("#standForFocus4"), 0, 100 ),
+      5: parallaxPinner( $("#standForFocus5"), $("#standForFocus5"), 0, 100 ),
+      6: parallaxPinner( $("#standForFocus6"), $("#standForFocus6"), 0, 100 ),
+      7: parallaxPinner( $("#standForFocus7"), $("#standForFocus7"), 0, 100 )
     }
   };
   console.log("Main: " + new Date().toUTCString());
 })();
-  
-  
   
   
 

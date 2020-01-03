@@ -97,8 +97,8 @@ body {
   opacity: 1;
   visibility: visible; }
 .numbers__selected--item img {
-  min-width: 250px;
-  min-height: 250px;
+  min-width: 300px;
+  min-height: 300px;
   background: lightgrey;
   margin: 0 auto; } 
 .numbers__selected--item h2 {
@@ -106,6 +106,7 @@ body {
   padding-top: 2rem; }
 .numbers__selected--item h4 {
   padding-top: .5rem;
+  line-height: 32px;
   font-weight: 500; }
 .numbers__icon--item {
   min-width: 100px;
@@ -143,7 +144,8 @@ body {
     z-index: 1;
     pointer-events: none; }
 #fuelingFg {
-  max-height: 50vh; }
+  max-height: 50vh;
+  opacity: 0.5; }
 .fueling__bg,
 .fueling__bg[class*="span"] {
   position: absolute;
@@ -290,6 +292,21 @@ body {
   top: 89%;
   left: 12%; }
 
+.rewarding .rewarding__rules {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  margin: 0 auto;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.1; }
+.rewarding .rewarding__rules hr {
+  border-color: var(--lightblue);
+  margin: 2.5% 0; }
+
 /*=====================MENTAL===============*/
 .mental,
 .mental[class*="span"] {
@@ -385,6 +402,8 @@ body {
   text-align: center; }
 .innovation .innovation__phone img {
   box-shadow: 0px 80px 45px 6px #666; }
+.innovation .innovation__copy {
+  margin-top: -10px; }
 .innovation .innovation__point--item {
   height: 0;
   visibility: hidden;
@@ -399,12 +418,20 @@ body {
   height: auto;
   visibility: visible;
   opacity: 1;
-  padding: 3% 0 0 0;}
+  padding: 2.5% 0 0 0; }
+.innovation .innovation__point--item div {
+  flex-basis: 100%;
+  height: 30px;
+  width: 3px;
+  margin-left: 24px;
+  margin-bottom: 15px;
+  border-left: 3px solid var(--midblue); } 
 .innovation .innovation__point--item img {
   width: 55px;
   height: 55px;
   object-fit: cover;
-  background: lightgrey;
+  background: transparent;
+  border: 3px solid var(--midblue);
   border-radius: 50%;
   margin-right: auto; }
 .innovation .innovation__point--item p {
@@ -441,7 +468,10 @@ body {
   color: var(--darkblue); }
 .testimonials .bamboo {
   height: 70vh; }
+.testimonials .bamboo>.slides {
+  height: 100%; }
 .testimonials .bamboo>.slides>* {
+  height: 100%;
   padding: 0 5%;
   background: var(--lightblue);
   overflow: visible; }
@@ -450,6 +480,9 @@ body {
   z-index: 1; }
 .testimonials .bamboo>.slides>.slide>p:first-child {
   padding-right: 5%; }
+.testimonials .bamboo .slides p span.name {
+  padding-top: 20px;
+  display: block; }
 .testimonials .bamboo>.bamboo-prev {
   left: 20%;
   top: unset;
@@ -480,10 +513,14 @@ body {
 .life[class*="span"] {
   height: 120vh;
   background: var(--darkblue); }
+.life .main__title h2,
+.life .main__title h2[class*="span"] {
+  color: var(--yellow); }
 .life .slideshow {
   height: 75vh; }
 .life .bamboo.fade>.slides>* {
-  height: auto; }
+  height: auto;
+  background-color: var(--darkblue); }
 .life .life__slide--copy {
   width: 50%;
   padding: 0 5%;
@@ -491,12 +528,13 @@ body {
   margin-right: auto;
   background: var(--darkblue) }
 .life .life__slide--copy h3 {
+  letter-spacing: 2px;
   text-align: left; }
 .life .life__slide--copy hr {
-  width: 200px;
+  width: 125px;
   height: 2px;
   background: var(--yellow);
-  margin: 25px 0;
+  margin: 35px 0;
   border: 0;
   outline: 0; }
 .life .bamboo .fit-img {
