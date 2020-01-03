@@ -129,7 +129,7 @@ var clickInit = function clickInit() {
   });
   $(".header__nav ul li a").click(function(event) {
     event.preventDefault();
-    if (!$(this).hasClass("active")) $(this).addClass("active");
+    if ($(window).scrollTop() < 200) navActive();
     $("html, body").animate({
         scrollTop: $($.attr(this, "href")).offset().top
     }, 500);
@@ -198,14 +198,14 @@ var baseInit = function baseInit() {
       })
     },
     standInit: {
-      0: parallaxPinner( $("#standForFocus0"), $("#standForFocus0"), 0, 100 ),
-      1: parallaxPinner( $("#standForFocus1"), $("#standForFocus1"), 0, 100 ),
-      2: parallaxPinner( $("#standForFocus2"), $("#standForFocus2"), 0, 100 ),
-      3: parallaxPinner( $("#standForFocus3"), $("#standForFocus3"), 0, 100 ),
-      4: parallaxPinner( $("#standForFocus4"), $("#standForFocus4"), 0, 100 ),
-      5: parallaxPinner( $("#standForFocus5"), $("#standForFocus5"), 0, 100 ),
-      6: parallaxPinner( $("#standForFocus6"), $("#standForFocus6"), 0, 100 ),
-      7: parallaxPinner( $("#standForFocus7"), $("#standForFocus7"), 0, 100 )
+      //0: parallaxPinner( $("#standForFocus0"), $("#standForFocus0"), 0, 100 ),
+      0: parallaxPinner( $("#standForFocus1"), $("#standForFocus1"), 0, 100 ),
+      1: parallaxPinner( $("#standForFocus2"), $("#standForFocus2"), 0, 100 ),
+      2: parallaxPinner( $("#standForFocus3"), $("#standForFocus3"), 0, 100 ),
+      3: parallaxPinner( $("#standForFocus4"), $("#standForFocus4"), 0, 100 ),
+      4: parallaxPinner( $("#standForFocus5"), $("#standForFocus5"), 0, 100 ),
+      5: parallaxPinner( $("#standForFocus6"), $("#standForFocus6"), 0, 100 ),
+      6: parallaxPinner( $("#standForFocus7"), $("#standForFocus7"), 0, 100 )
     }
   };
   console.log("Main: " + new Date().toUTCString());
