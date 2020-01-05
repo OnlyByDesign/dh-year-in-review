@@ -1,23 +1,10 @@
-var DOM = {
-  hero: $("#hero")[0],
-  numbers: $("#byTheNumbers")[0],
-  fueling: $("#fuelingFuture")[0],
-  rewarding: $("#rewardingGrowth")[0],
-  mental: $("#mentalHealth")[0],
-  security: $("#securityTelecom")[0],
-  innovation: $("#innovationBest")[0],
-  testimonials: $("#memorableTestimonials")[0],
-  life: $("#lifeDialogue")[0],
-  stand: $("#standFor")[0],
-  message: $("#messageLeaders")[0]
-};
-/*======================================
- * =====================================
- * ======= UNIVERSAL FUNCTIONS =========
- * =====================================
- * ==================================*/
 var navActive = function navActive() {
   $(window).scrollTop() > 100 ? $('.header').addClass('active') : $('.header').removeClass('active');
+};
+var scrollElement = function scrollElement(el, dur) {
+  $("html,body").animate({
+    scrollTop: $($.attr(el, "href")).offset().top
+  }, dur);
 };
 var isActive = function isActive(el, target) {
   $.fn.isOnScreen = function() { 
@@ -125,14 +112,13 @@ var scrollInit = function eventlInit() {
 };
 var clickInit = function clickInit() {
   $(".numbers__icon--item").click(function() {
-    swapActive( this, ".numbers__selected", "item", "selected" )
+    swapActive( this, ".numbers__selected", "item", "selected" );
+    scrollElement( this.children[0], 250 );
   });
   $(".header__nav ul li a").click(function(event) {
     event.preventDefault();
     if ($(window).scrollTop() < 200) navActive();
-    $("html, body").animate({
-        scrollTop: $($.attr(this, "href")).offset().top
-    }, 500);
+    scrollElement(this, 500);
   });
 };
 var baseInit = function baseInit() {
