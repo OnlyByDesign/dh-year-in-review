@@ -125,6 +125,7 @@ var baseInit = function baseInit() {
   navActive();
   $("#selected1").parent().parent().addClass("active");
   $("#item1").addClass("active");
+  $("#innovationFocus").children()[0].children[0].classList.add("flex-h");
 };
 
 (function init() {
