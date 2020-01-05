@@ -114,7 +114,8 @@ body {
   margin: 0 auto; } 
 .numbers__selected--item h2 {
   color: var(--darkblue);
-  padding-top: 2rem; }
+  padding-top: 2rem;
+  letter-spacing: 2px; }
 .numbers__selected--item h4 {
   padding-top: .5rem;
   line-height: 32px;
@@ -136,7 +137,13 @@ body {
   max-width: 100px;
   min-height: 100px;
   max-height: 100px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  -webkit-transition: border .25s ease-in-out;
+  -moz-transition: border .25s ease-in-out;
+  -o-transition: border .25s ease-in-out;
+  -ms-transition: border .25s;
+  transition: border .25s;
+  transition-timing-function: cubic-bezier(0.25, 0.25, 0.005, 1); }
 .active .numbers__item--svg {
   border-radius: 50%;
   border: 2px solid var(--darkblue); }
@@ -151,7 +158,13 @@ body {
   stroke: #333;
   stroke-width: 6px;
   stroke-linecap: round;
-  stroke-linejoin: round; }
+  stroke-linejoin: round;
+  -webkit-transition: stroke .25s ease-in-out;
+  -moz-transition: stroke .25s ease-in-out;
+  -o-transition: stroke .25s ease-in-out;
+  -ms-transition: stroke .25s;
+  transition: stroke .25s;
+  transition-timing-function: cubic-bezier(0.25, 0.25, 0.005, 1); }
 .active .numbers__item--svg svg, .numbers__icon--item:hover>a>.numbers__item--svg svg {
   stroke: var(--darkblue); }
 

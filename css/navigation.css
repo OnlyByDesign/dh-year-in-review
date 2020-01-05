@@ -24,7 +24,16 @@
   font-size: 17px;
   letter-spacing: 2px;
   padding-right: 50px;
-  display: inline-block; }
+  display: inline-block;
+  padding-right: 2rem; }
+.header__nav ul li a {
+  color: white; }
+.header__nav ul li a:hover {
+  color:var(--yellow); }
+nav.mobile__nav {
+  display: none;
+  visibility: hidden;
+  opacity: 0; }
 
 /*HEADER ACTIVE*/
 .header.active {
@@ -34,16 +43,100 @@
   max-width: 175px; }
 .header.active .header__nav {
   margin: 9px 0; }
+.header.active .header__nav ul li {
+  font-size: 16px; }
+
+/*MOBILE NAVIGATION*/
+@media only screen and (max-width:1200px ) {
+  nav.header__nav {
+    display: none;
+    visibility: hidden;
+    opacity: 0; }
+  nav.mobile__nav {
+    display: inline;
+    visibility: visible;
+    opacity: 1; }
+  #menuToggle {
+    display: block;
+    float: right;
+    position: relative;
+    top: 15px;
+    right: 20px;
+    -webkit-user-select: none;
+    user-select: none; }
+  #menuToggle a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease; }
+  #menuToggle a:hover {
+    color: var(--yellow); }
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none; }
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 3px;
+    margin-bottom: 7px;
+    position: relative;
+    background: white;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease; }
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%; }
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%; }
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, 1px); }
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2); }
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px); }
+  #menu {
+    position: absolute;
+    width: 40vw;
+    height: 110vh;
+    margin: -100px 0 0 50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: var(--darkblue);
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0 0;
+    transform: translate(100%,0);
+    transition: transform .5s cubic-bezier(0.77,0.2,0.05,1.0); }
+  #menu li {
+    font-size: 17px;
+    letter-spacing: 2px;
+    padding: 10px 0;
+    font-size: 22px; }
+  #menuToggle input:checked ~ ul {
+    transform: translate(-99%,0); } 
+}
 
 /*FOOTER*/
 .footer,
 .footer[class*="span"] {
-  min-height: 75vh;
+  min-height: 85vh;
   background: var(--darkblue); }
 .footer h3,
 .footer[class*="span"] h3 {
   letter-spacing: .05em; }
 .footer img {
-  width: 150px;
+  width: 125px;
   height: auto;
   margin: 0 auto; }
