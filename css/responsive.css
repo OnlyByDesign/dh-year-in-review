@@ -44,19 +44,16 @@
     height: 100vh;
     padding: 5% 2.5%;
     z-index: 2;
-    background: rgba(255,255,255,0.75);
+    background: rgba(0, 116, 192,0.75);
     overflow: hidden; }
   .life .life__slide--copy h3 {
-    font-weight: 700;
-    color: var(--darkblue); }
-  .life .life__slide--copy hr {
-    background: var(--darkblue); }
-  .life .life__slide--copy p {
-    color: black; }
+    font-weight: 700; }
   .life .bamboo .fit-img {
     max-width: 100%;
     position: absolute;
     left: 0; }
+  .life .bamboo-navigation {
+    bottom: -10%; }
 }
   
 @media only screen and (max-width:1000px) {
@@ -82,6 +79,8 @@
     padding: 0; }
   .security .security__background {
     display: none; }
+  .innovation .innovation__bg--left { width:85vw; top:90vh; }
+  .innovation .innovation__bg--right { width:100vw; bottom:-20vh; }
 }
 
 @media only screen and (max-width: 850px) {
@@ -93,9 +92,7 @@
     flex: 1 0 30%; }
 }
 
-@media only screen and (max-width:770px) {
-  .row-fluid [class*="span"] {
-    overflow-x: hidden; }
+@media only screen and (max-width:768px) {
   .mental .mental__foreground img.mental__image--fg {
     width:75% }
   .mental .mental__background {
@@ -104,6 +101,13 @@
     margin-top: -4%; }
   .mental .mental__parallax:nth-child(4) {
     margin-top: -4%; }
+  .innovation .innovation__copy.copy__left,
+  .innovation .innovation__copy.copy__left[class*="span"] {
+    width: 80%; }
+  .life .life__slide--copy {
+    width: 100%; }
+  .life .bamboo-navigation {
+    width: 90%; }
 }
 
 /* Smartphones (portrait and landscape) ----------- */

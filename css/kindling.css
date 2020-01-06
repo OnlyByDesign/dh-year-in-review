@@ -48,13 +48,13 @@ h1 {
 h2 {
     font-size: calc(50px + (72 - 50) * ((99vw - 700px) / (1900 - 700)));
     font-weight:800;
-    line-height: 3.5rem;
+    line-height: 4rem;
     letter-spacing: 1px;
 }
 h3 {
     font-size: calc(32px + (44 - 32) * ((100vw - 300px) / (1900 - 300)));
     font-weight:500;
-    line-height: 2.5rem;
+    line-height: 3.5rem;
 }
 h4 {
     font-size: 22px;
@@ -150,7 +150,12 @@ html, body {
 
 }
 @media screen and (max-width: 1024px) {
-  
+  h2 {
+    line-height: 3.5rem;
+  }
+  h3 {
+    line-height: 2.5rem;
+  }
 }
 @media screen and (max-width: 992px) {
   

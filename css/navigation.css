@@ -108,7 +108,7 @@ nav.mobile__nav {
     transform: rotate(-45deg) translate(0, -1px); }
   #menu {
     position: absolute;
-    width: 40vw;
+    width: 50vw;
     height: 110vh;
     margin: -100px 0 0 50px;
     padding: 50px;
@@ -126,6 +126,10 @@ nav.mobile__nav {
     font-size: 22px; }
   #menuToggle input:checked ~ ul {
     transform: translate(-99%,0); } 
+}
+@media only screen and (max-width:600px) {
+  #menu {
+    width: 75vw; }
 }
 
 /*FOOTER*/
