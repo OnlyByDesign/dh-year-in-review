@@ -203,9 +203,9 @@ var standInit = function standInit() {
     events: {
       0: scrollInit(),
       1: clickInit(),
-      2: resizeInit()
+      2: resizeInit(),
+      3: baseInit()
     },
-    custom: baseInit(),
     slider: {
       0: testimonialInit(),
       1: lifeInit()
