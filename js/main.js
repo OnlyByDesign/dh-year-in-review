@@ -1,3 +1,10 @@
+var removeWidows = function removeWidows() {
+  $('h2, h3, h4').each(function(i,d) {
+    if (!$(this).parent()[0].classList.contains("stand__focus")) {
+      $(d).html( $(d).text().replace(/\s(?=[^\s]*$)/g, "&nbsp;") )   
+    };
+  });
+};
 var navActive = function navActive() {
   $(window).scrollTop() > 100 ? $('.header').addClass('active') : $('.header').removeClass('active');
 };
@@ -111,18 +118,22 @@ var scrollInit = function eventlInit() {
   });
 };
 var clickInit = function clickInit() {
-  $(".numbers__icon--item").click(function() {
-    swapActive( this, ".numbers__selected", "item", "selected" );
-    scrollElement( this.children[0], 250 );
-  });
-  $(".header__nav ul li a").click(function(event) {
+  $(".header__nav ul li a, #menuToggle a").click(function(event) {
     event.preventDefault();
     if ($(window).scrollTop() < 200) navActive();
     scrollElement(this, 500);
   });
+  $(".numbers__icon--item").click(function() {
+    swapActive( this, ".numbers__selected", "item", "selected" );
+    scrollElement( this.children[0], 250 );
+  });
+};
+var resizeInit = function resizeInit() {
+  removeWidows();
 };
 var baseInit = function baseInit() {
   navActive();
+  removeWidows();
   $("#selected1").parent().parent().addClass("active");
   $("#item1").addClass("active");
   $("#innovationFocus").children()[0].children[0].classList.add("flex-h");
@@ -132,7 +143,8 @@ var baseInit = function baseInit() {
   var domInit = {
     events: {
       0: scrollInit(),
-      1: clickInit()
+      1: clickInit(),
+      2: resizeInit()
     },
     custom: baseInit()
   };
@@ -195,7 +207,7 @@ var baseInit = function baseInit() {
       6: parallaxPinner( $("#standForFocus7"), $("#standForFocus7"), 0, 100 )
     }
   };
-  console.log("Main: " + new Date().toUTCString());
+  console.log(new Date().toUTCString());
 })();
   
   
