@@ -1,3 +1,4 @@
+console.log( $(window).width() );
 var removeWidows = function removeWidows() {
   $('h2, h3, h4').each(function(i,d) {
     if (!$(this).parent()[0].classList.contains("stand__focus")) {
@@ -108,6 +109,7 @@ function revealInnovation() {
  * =========== INITIALIZER =============
  * =====================================
  * ==================================*/
+var w = $(window).width();
 var scrollInit = function eventlInit() {
   $(window).scroll(function() {
     if ($(window).scrollTop() < 200) navActive();
@@ -129,14 +131,71 @@ var clickInit = function clickInit() {
   });
 };
 var resizeInit = function resizeInit() {
-  removeWidows();
+  //removeWidows();
 };
 var baseInit = function baseInit() {
   navActive();
-  removeWidows();
+  //removeWidows();
   $("#selected1").parent().parent().addClass("active");
   $("#item1").addClass("active");
   $("#innovationFocus").children()[0].children[0].classList.add("flex-h");
+};
+var rewardInit = function rewardInit() {
+  if (w >= 750) parallaxScroll( $("#rewardingParallax1"), -500, 0, 1, 200 );
+  if (w >= 750) parallaxScroll( $("#rewardingParallax2"), -250, 0, 1, 200 );
+};
+var mentalInit = function mentalInit() {
+  parallaxScroll( $("#mentalParallax0"), 0, -50, 1, 200 );
+  parallaxScroll( $("#mentalParallax1"), 0, -100, 1, 200 );
+  parallaxScroll( $("#mentalParallax2"), 0, 200, 1, 250 );
+  parallaxScroll( $("#mentalParallax3"), 0, -300, 1, 300 );
+};
+var securityInit = function securityInit() {
+  parallaxScroll( $("#securityBg1"), 100, -50, 1, 200 );
+  parallaxScroll( $("#securityBg2"), -100, 50, 1, 200 );
+  parallaxScroll( $("#securityBg3"), 100, -50, 1, 200 );
+  parallaxScroll( $("#securityBg4"), 100, 0, 1, 200 );
+  parallaxScroll( $("#securityBg5"), -100, -50, 1, 200 );
+  parallaxScroll( $("#securityBg6"), 100, 50, 0, 200 );
+};
+var innovationInit = function InnovationInit() {
+  parallaxScroll( $("#innovationBgL"), -250, 0, 1, 200 );
+  parallaxScroll( $("#innovationBgR"), -500, 0, 1, 200 );
+  parallaxPinner( $("#innovationFocus"), $("#innovationFocus"), 0.25, 300 );
+};
+var testimonialInit = function testimonialInit() {
+  bamboo(document.getElementById("testimonialSlider"), {
+    autoPlay: false,
+    timeout: 999999999999999999999999999,
+    speed: 9999999999999999999999999999,
+    hideDot: false,
+    hideArrow: false,
+    prev: document.querySelector('.prev'),
+    next: document.querySelector('.next'),
+    dots: document.querySelector('.dots')
+  });
+};
+var lifeInit = function lifeInit() {
+  bamboo(document.getElementById("lifeSlider"), {
+    autoPlay: false,
+    timeout: 999999999999999999999999999,
+    speed: 9999999999999999999999999999,
+    hideDot: false,
+    hideArrow: false,
+    prev: document.querySelector('.prev'),
+    next: document.querySelector('.next'),
+    dots: document.querySelector('.dots')
+  });
+};
+var standInit = function standInit() {
+  //rallaxPinner( $("#standForFocus0"), $("#standForFocus0"), 0, 100 ),
+  if (w >= 767) parallaxPinner( $("#standForFocus1"), $("#standForFocus1"), 0, 100 );
+  if (w >= 767) parallaxPinner( $("#standForFocus2"), $("#standForFocus2"), 0, 100 );
+  if (w >= 767) parallaxPinner( $("#standForFocus3"), $("#standForFocus3"), 0, 100 );
+  if (w >= 767) parallaxPinner( $("#standForFocus4"), $("#standForFocus4"), 0, 100 );
+  if (w >= 767) parallaxPinner( $("#standForFocus5"), $("#standForFocus5"), 0, 100 );
+  if (w >= 767) parallaxPinner( $("#standForFocus6"), $("#standForFocus6"), 0, 100 );
+  if (w >= 767) parallaxPinner( $("#standForFocus7"), $("#standForFocus7"), 0, 100 );
 };
 
 (function init() {
@@ -146,65 +205,17 @@ var baseInit = function baseInit() {
       1: clickInit(),
       2: resizeInit()
     },
-    custom: baseInit()
-  };
-  var interactionInit = {
-    rewardInit: {
-      0: parallaxScroll( $("#rewardingParallax1"), -500, 0, 1, 200 ),
-      1: parallaxScroll( $("#rewardingParallax2"), -250, 0, 1, 200 )
+    custom: baseInit(),
+    slider: {
+      0: testimonialInit(),
+      1: lifeInit()
     },
-    mentalInit: {
-      0: parallaxScroll( $("#mentalParallax0"), 0, -50, 1, 200 ),
-      1: parallaxScroll( $("#mentalParallax1"), 0, -100, 1, 200 ),
-      2: parallaxScroll( $("#mentalParallax2"), 0, 200, 1, 250 ),
-      3: parallaxScroll( $("#mentalParallax3"), 0, -300, 1, 300 )
-    },
-    securityInit: {
-      0: parallaxScroll( $("#securityBg1"), 100, -50, 1, 200 ),
-      1: parallaxScroll( $("#securityBg2"), -100, 50, 1, 200 ),
-      2: parallaxScroll( $("#securityBg3"), 100, -50, 1, 200 ),
-      3: parallaxScroll( $("#securityBg4"), 100, 0, 1, 200 ),
-      4: parallaxScroll( $("#securityBg5"), -100, -50, 1, 200 ),
-      5: parallaxScroll( $("#securityBg6"), 100, 50, 0, 200 )
-    },
-    innovationInit: {
-      0: parallaxScroll( $("#innovationBgL"), -250, 0, 1, 200 ),
-      1: parallaxScroll( $("#innovationBgR"), -500, 0, 1, 200 ),
-      2: parallaxPinner( $("#innovationFocus"), $("#innovationFocus"), 0.2, 300 )
-    },
-    testimonialInit: {
-      0: bamboo(document.getElementById("testimonialSlider"), {
-          autoPlay: false,
-          timeout: 999999999999999999999999999,
-          speed: 9999999999999999999999999999,
-          hideDot: false,
-          hideArrow: false,
-          prev: document.querySelector('.prev'),
-          next: document.querySelector('.next'),
-          dots: document.querySelector('.dots')
-      })
-    },
-    lifeInit: {
-      0: bamboo(document.getElementById("lifeSlider"), {
-          autoPlay: false,
-          timeout: 999999999999999999999999999,
-          speed: 9999999999999999999999999999,
-          hideDot: false,
-          hideArrow: false,
-          prev: document.querySelector('.prev'),
-          next: document.querySelector('.next'),
-          dots: document.querySelector('.dots')
-      })
-    },
-    standInit: {
-      //0: parallaxPinner( $("#standForFocus0"), $("#standForFocus0"), 0, 100 ),
-      0: parallaxPinner( $("#standForFocus1"), $("#standForFocus1"), 0, 100 ),
-      1: parallaxPinner( $("#standForFocus2"), $("#standForFocus2"), 0, 100 ),
-      2: parallaxPinner( $("#standForFocus3"), $("#standForFocus3"), 0, 100 ),
-      3: parallaxPinner( $("#standForFocus4"), $("#standForFocus4"), 0, 100 ),
-      4: parallaxPinner( $("#standForFocus5"), $("#standForFocus5"), 0, 100 ),
-      5: parallaxPinner( $("#standForFocus6"), $("#standForFocus6"), 0, 100 ),
-      6: parallaxPinner( $("#standForFocus7"), $("#standForFocus7"), 0, 100 )
+    parallax: {
+      0: rewardInit(),
+      1: mentalInit(),
+      2: securityInit(),
+      3: innovationInit(),
+      4: standInit()
     }
   };
   console.log(new Date().toUTCString());
