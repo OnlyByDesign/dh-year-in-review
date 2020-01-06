@@ -59,7 +59,7 @@ body {
   height: 105vh;
   margin-top: -5vh;
   border-radius: 0 0 30rem 0;
-  background: linear-gradient(0deg,rgba(0,116,192, 1),rgba(51,172,245, .75)),url('https://cdn2.hubspot.net/hubfs/5213739/2019%20Year%20in%20Review%20Landing%20Page/Yea%20in%20review%202019%20-%20quick%20mockup%20(1).jpg');
+  background: linear-gradient(0deg,rgba(0,116,192, 1),rgba(51,172,245, .75)),url('https://cdn2.hubspot.net/hubfs/5213739/2019%20Year%20in%20Review%20Landing%20Page/dialogue-team.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed; }
@@ -68,7 +68,7 @@ body {
   font-weight: 400;
   letter-spacing: 2px;
   display: block;
-  padding-top: .5rem;}
+  padding-top: .5rem; }
 .hero .hero__icon, 
 .hero .hero__icon[class*=span] {
   height: 125px;
@@ -116,9 +116,9 @@ body {
 .numbers__selected--item * {
   vertical-align: top; }
 .numbers__selected--item img {
-  min-width: 300px;
-  min-height: 300px;
-  background: lightgrey;
+  max-height: 250px;
+  max-width: 250px;
+  text-align: center;
   margin: 0 auto; } 
 .numbers__selected--item h2 {
   color: var(--darkblue);
@@ -526,18 +526,18 @@ body {
   width: 3px;
   margin-left: 24px;
   margin-bottom: 15px;
-  border-left: 3px solid var(--midblue); } 
+  border-left: 3px solid var(--darkblue); } 
 .innovation .innovation__point--item img {
   width: 55px;
   height: 55px;
-  object-fit: cover;
+  object-fit: contain;
   background: transparent;
-  border: 3px solid var(--midblue);
-  border-radius: 50%;
   margin-right: auto; }
 .innovation .innovation__point--item p {
   line-height: 26px;
   flex-basis: 85%; }
+.innovation .innovation__point--item .focus {
+  margin-right: auto; }
 .innovation .innovation__focus {
   height: auto !important; }
 .innovation .innovation__background {
@@ -611,8 +611,17 @@ body {
   z-index: 0;
   pointer-events: none; }
 .testimonial__icon img.fit-img {
-  object-fit: none;
-  top: 35% !important; }
+  object-fit: cover;
+  top: 10%;
+  left: 0;
+  right: 0;
+  max-width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  transform: none; }
+#testimonialIcon1 { top:-10%; }
+#testimonialIcon3 { max-width:70%; top:12.5%; left:5%; }
+#testimonialIcon4 { top:12.5%; }
 
 /*=====================LIFE======================*/
 .life,
@@ -680,10 +689,14 @@ body {
 .stand .main__copy[class*="span"], 
 .stand .main__copy[class*="span"]:first-child {
   width: 60%;
+  padding-top: 10rem;
   text-align: center; }
-.stand .main__copy h5,
+.stand .main__copy h4,
 .stand .main__copy h6 {
   display: inline-block; }
+.stand .main__copy h4.copy {
+  font-weight: 400;
+  line-height: 2.5rem; }
 .stand .main__copy h6 {
   color: white; }
 .stand .stand__quote--name {
@@ -707,9 +720,7 @@ body {
   line-height: 34px;
   letter-spacing: 2px;
   text-align: center; }
-/*#standForFocus1 { background:var(--lightblue); }
-#standForFocus1 h2 { color:var(--darkblue); }
-#standForFocus1 .stand__copy { color:black; }*/
+#standForFocus1 h2 { color:var(--orange); }
 
 #standForFocus2 { background:var(--orange); }
 #standForFocus2 h2 { color:var(--darkblue); }

@@ -135,7 +135,7 @@ nav.mobile__nav {
 /*FOOTER*/
 .footer,
 .footer[class*="span"] {
-  min-height: 85vh;
+  min-height: 100vh;
   background: var(--darkblue); }
 .footer h3,
 .footer[class*="span"] h3 {
@@ -144,3 +144,6 @@ nav.mobile__nav {
   width: 125px;
   height: auto;
   margin: 0 auto; }
+
+
+
