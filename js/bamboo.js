@@ -128,19 +128,17 @@ var bamboo = (function(){
                 next: (p.next !== undefined) ? p.next : slideshowElement.querySelector('.next'),
                 hideDot: p.hideDot !== undefined ? p.hideDot : false,
                 hideArrow: p.hideArrow !== undefined ? p.hideArrow : false,
-
                 width: p.width !== undefined ? p.width : slideshowElement.clientWidth,
                 height: p.offsetHeight !== undefined ? p.offsetHeight : slideshowElement.clientHeight,
                 backgroundColor: p.backgroundColor,
                 index: p.index !== undefined ? p.index : 0,
                 vertical: p.vertical !== undefined ? p.vertical : false,
-                speed: p.speed,
+                speed: 5000,
                 autoPlay: p.autoPlay !== undefined ? p.autoPlay : true,
                 autoFitImg: p.autoFitImg !== undefined ? p.autoFitImg : true,
                 reverse: p.reverse !== undefined ? p.reverse : false,
                 timeout: p.timeout !== undefined ? p.timeout : 2000,
                 jsAnime: p.jsAnime !== undefined ? p.jsAnime : false,
-                
                 pause: false,
                 // toward: p.toward !== undefined ? p.toward : 'horizontal',
             };
