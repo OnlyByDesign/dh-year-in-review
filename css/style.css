@@ -51,8 +51,19 @@ body {
 .copy__left, 
 .copy__left[class*="span"],
 .copy__left .main__copy[class*="span"],
-.copy__left .row-fluid .main__copy[class*="span"]:first-child{
+.copy__left .row-fluid .main__copy[class*="span"]:first-child {
   margin-left: 0; }
+.cta__button,
+.cta__button[class*="span"],
+.cta__button[class*="span"]:first-child {
+  min-width: 200px;
+  min-height: 55px;
+  border-radius: 10px;
+  background: white;
+  border: none;
+  outline: none;
+  text-align: center;
+  margin: 0 auto; }
 
 /*=====================HERO======================*/
 .hero {
