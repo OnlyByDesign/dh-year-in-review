@@ -110,6 +110,46 @@
     width: 90%; }
 }
 
+@media only screen and (max-width:767px) {
+  .rewarding .rewarding__numbers {
+    display: none; }
+}
+
+@media only screen and (max-width: 600px) {
+  .main__subtitle, .main__subtitle[class*="span"], .main__subtitle[class*="span"]:first-child {
+    max-width: 90%; }
+  .hero .hero__sub, .hero .hero__sub[class*="span"] {
+    width: 90%;
+    margin: 0 auto; }
+  .numbers__selected--item h4, .numbers__selected--item h4[class*="span"] {
+    font-size: 20px; }
+  #fuelingFg {
+    width: 90%; }
+  .life .slideshow {
+    height: 90vh; }
+  .life .bamboo.fade>.slides>* {
+    min-height: auto;
+    max-height: auto; }
+  .life .life__slide--copy {
+    padding: 10% 2.5%; }
+  .life .bamboo-navigation {
+    bottom: -12.5%; }
+  .stand .main__copy, .stand .main__copy[class*="span"], .stand .main__copy[class*="span"]:first-child {
+    padding-top: 0; }
+  .stand .main__copy h4.copy {
+    font-size: 18px;
+    text-align: left; }
+}
+
+@media only screen and (max-width:500px) {
+  .life, 
+  .life[class*="span"] {
+    height: 100%; }
+  .stand__copy, 
+  .stand .stand__copy {
+    width: 90%; }
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 /* Styles */

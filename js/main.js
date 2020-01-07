@@ -1,4 +1,3 @@
-console.log( $(window).width() );
 var removeWidows = function removeWidows() {
   $('h2, h3, h4').each(function(i,d) {
     if (!$(this).parent()[0].classList.contains("stand__focus")) {
@@ -7,11 +6,12 @@ var removeWidows = function removeWidows() {
   });
 };
 var navActive = function navActive() {
-  $(window).scrollTop() > 100 ? $('.header').addClass('active') : $('.header').removeClass('active');
+  var nav = $('.header');
+  $(window).scrollTop() > 100 ? nav.addClass('active') : nav.removeClass('active');
 };
-var scrollElement = function scrollElement(el, dur) {
+var scrollElement = function scrollElement(el, px, dur) {
   $("html,body").animate({
-    scrollTop: $($.attr(el, "href")).offset().top
+    scrollTop: $($.attr(el, "href")).offset().top - px
   }, dur);
 };
 var isActive = function isActive(el, target) {
@@ -123,11 +123,11 @@ var clickInit = function clickInit() {
   $(".header__nav ul li a, #menuToggle a").click(function(event) {
     event.preventDefault();
     if ($(window).scrollTop() < 200) navActive();
-    scrollElement(this, 500);
+    scrollElement( this, 0, 500 );
   });
   $(".numbers__icon--item").click(function() {
     swapActive( this, ".numbers__selected", "item", "selected" );
-    scrollElement( this.children[0], 250 );
+    scrollElement( this.children[0], 100, 250 );
   });
 };
 var resizeInit = function resizeInit() {
@@ -161,13 +161,11 @@ var securityInit = function securityInit() {
 var innovationInit = function InnovationInit() {
   parallaxScroll( $("#innovationBgL"), -250, 0, 1, 200 );
   parallaxScroll( $("#innovationBgR"), -500, 0, 1, 200 );
-  parallaxPinner( $("#innovationFocus"), $("#innovationFocus"), 0.25, 300 );
+  parallaxPinner( $("#innovationFocus"), $("#innovationFocus"), 0.2, 285 );
 };
 var testimonialInit = function testimonialInit() {
   bamboo(document.getElementById("testimonialSlider"), {
     autoPlay: false,
-    timeout: 999999999999999999999999999,
-    speed: 9999999999999999999999999999,
     hideDot: false,
     hideArrow: false,
     prev: document.querySelector('.prev'),
@@ -178,8 +176,6 @@ var testimonialInit = function testimonialInit() {
 var lifeInit = function lifeInit() {
   bamboo(document.getElementById("lifeSlider"), {
     autoPlay: false,
-    timeout: 999999999999999999999999999,
-    speed: 9999999999999999999999999999,
     hideDot: false,
     hideArrow: false,
     prev: document.querySelector('.prev'),

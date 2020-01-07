@@ -59,29 +59,29 @@ body {
   height: 105vh;
   margin-top: -5vh;
   border-radius: 0 0 30rem 0;
-  background: linear-gradient(0deg,rgba(0,116,192, 1),rgba(51,172,245, .75)),url('https://cdn2.hubspot.net/hubfs/5213739/2019%20Year%20in%20Review%20Landing%20Page/dialogue-team.jpg');
+  background: url('https://cdn2.hubspot.net/hubfs/5213739/2019%20Year%20in%20Review%20Landing%20Page/dialogue-hero.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed; }
 .hero .hero__subtitle {
   font-size: calc(22px + (32 - 22) * ((100vw - 300px) / (1900 - 300)));
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 2px;
   display: block;
   padding-top: .5rem; }
 .hero .hero__icon, 
 .hero .hero__icon[class*=span] {
-  height: 125px;
-  width: 125px;
+  height: 175px;
+  width: 175px;
   display: block;
   text-align: center;
-  margin: 30px auto;
-  float: none;
-  background: white;
-  border-radius: 50%; }
-.hero .hero__sub {
+  margin: 0 auto;
+  float: none; }
+.hero .hero__sub,
+.hero .hero__sub[class*="span"] {
   text-align: center; }
 .hero .hero__sub span {
+  font-size: 20px;
   font-weight:400;
   letter-spacing: 1px;
   font-style: italic; }
@@ -96,13 +96,12 @@ body {
   color: var(--darkblue); }
 .numbers__selected, 
 .numbers__selected[class*="span"] {
-  min-height: 600px;
-  height: auto;
-  max-height: 600px;
+  height: 100%;
+  padding: 0 0 6.5rem 0;
   text-align: center;
   display: none;
   opacity: 0; 
-  visibility: hidden;}
+  visibility: hidden; }
 .numbers__selected.active, 
 .numbers__selected.active[class*="span"] {
   display: -webkit-box;
@@ -116,18 +115,18 @@ body {
 .numbers__selected--item * {
   vertical-align: top; }
 .numbers__selected--item img {
-  max-height: 250px;
-  max-width: 250px;
+  max-height: 225px;
+  max-width: 225px;
   text-align: center;
   margin: 0 auto; } 
 .numbers__selected--item h2 {
   color: var(--darkblue);
-  padding-top: 2rem;
+  padding-top: 1rem;
   letter-spacing: 2px; }
 .numbers__selected--item h4 {
   width: 90%;
   margin: 0 auto;
-  padding-top: .5rem;
+  padding-top: 2rem;
   line-height: 2rem;
   font-weight: 500; }
 .numbers__icon--item {
@@ -138,6 +137,7 @@ body {
 .numbers__icon--item h5 {
   font-size: 16px;
   font-weight: 700;
+  line-height: 1.25rem;
   padding-bottom: 0.5rem; }
 .numbers__icon--item.active h5 {
   font-weight: 800;
@@ -186,16 +186,21 @@ body {
   background: var(--darkblue); }
 .fueling .main__title h2 {
   color: var(--yellow); }
-.fueling .fueling__fg {
+.fueling .fueling__main,
+.fueling .fueling__main[class*="span"] {
+  position: relative;
+  z-index: 2; }
+.fueling .fueling__fg,
+.fueling .fueling__fg[class*="span"] {
+  position: absolute;
+  bottom: -2rem;
+  width: auto;
+  right: 0;
+  left: 0;
   text-align: center;
-    position: absolute;
-    bottom: -2rem;
-    width: auto;
-    right: 0;
-    left: 0;
-    margin: 0 auto;
-    z-index: 1;
-    pointer-events: none; }
+  margin: 0 auto;
+  z-index: 1;
+  pointer-events: none; }
 #fuelingFg {
   max-height: 50vh;
   opacity: 0.5; }
@@ -219,7 +224,7 @@ body {
   width: 125px;
   height: 0;
   display: inline-block;
-  border: 3px solid rgba(255,255,255,0.3);
+  border: 3px solid rgba(255,255,255,0.2);
   background-color: var(--darkblue);
   bottom: 0;
   -webkit-transition: all 2.5s;
@@ -241,26 +246,18 @@ body {
 .active .fueling__bg--right div:nth-child(5) { height:25vh; right:0px; }
 
 /*=====================REWARDING===============*/
-.rewarding {
+.rewarding,
+.rewarding[class*="span"] {
+  min-height: 85vh;
   background: transparent; }
 .rewarding .main__title h2 {
   color: var(--darkblue); }
-.rewarding .rewarding__numbers {
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: -1;
-  pointer-events: none; }
 .rewarding .rewarding__graph {
   position: absolute;
   width: 100%;
   height: 100%;
   bottom: 0;
-  z-index: 0;
+  z-index: -1;
   pointer-events: none; }
 .rewarding .rewarding__graph div {
   width: 6%;
@@ -291,15 +288,25 @@ body {
   height: 35vh; }
 .rewarding__graph.active div:nth-child(8) {
   height: 65vh;
-  background: var(--darkblue); }
+  background: var(--midblue); }
 
+.rewarding .rewarding__numbers {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -2;
+  pointer-events: none; }
 .rewarding .rewarding__parallax {
   overflow-x: hidden;
   overflow-y: hidden;
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: -1;
+  z-index: -2;
   pointer-events: none;}
 .rewarding .rewarding__parallax h2 {
   font-size: 190px;
@@ -392,8 +399,8 @@ body {
   height: 100%;
   object-fit: cover; }
 .mental .mental__parallax {
-  overflow-x: hidden; }
-.mental .mental__parallax:nth-child(1) { position: absolute; left: 15%; }
+  overflow: hidden; }
+.mental .mental__parallax:nth-child(1) { position: absolute; left: 15%; overflow:visible; }
 .mental .mental__parallax:nth-child(2) { margin-left: 0; margin-top: 0; }
 .mental .mental__parallax:nth-child(3) { margin-left: -20%; margin-top: -5%; }
 .mental .mental__parallax:nth-child(4) { margin-left: 0; margin-top: -6%; }
@@ -450,7 +457,7 @@ body {
 /*=====================INNOVATION===============*/
 .innovation,
 .innovation[class*="span"] {
-  height: 400vh;
+  height: 398vh;
   padding-bottom: 0;
   background: transparent; }
 .innovation .main__title h2 {
@@ -528,15 +535,19 @@ body {
   margin-bottom: 15px;
   border-left: 3px solid var(--darkblue); } 
 .innovation .innovation__point--item img {
-  width: 55px;
-  height: 55px;
+  min-width: 50px;
+  max-width: 50px;
+  min-height: 50px;
+  max-height: 50px;
   object-fit: contain;
   background: transparent;
   margin-right: auto; }
 .innovation .innovation__point--item p {
   line-height: 26px;
+  -ms-flex-basis: 85%;
   flex-basis: 85%; }
 .innovation .innovation__point--item .focus {
+  width: 100%;
   margin-right: auto; }
 .innovation .innovation__focus {
   height: auto !important; }
@@ -689,7 +700,7 @@ body {
 .stand .main__copy[class*="span"], 
 .stand .main__copy[class*="span"]:first-child {
   width: 60%;
-  padding-top: 10rem;
+  /*padding-top: 10rem;*/
   text-align: center; }
 .stand .main__copy h4,
 .stand .main__copy h6 {
@@ -703,8 +714,17 @@ body {
   width: auto;
   padding-top: 2rem;
   text-align: center; }
+.stand .main__copy img,
+.quote__name--main {
+  display: inline-block; }
 .stand .main__copy img {
-  display: none; }
+  width: 100px;
+  border-radius: 50%;
+  margin-right: 25px; }
+.stand .quote__name--main {
+  text-align: left;
+  vertical-align: top;
+  padding-top: 5px; }
 .stand__focus {
   height: 100vh;
   position: relative;
@@ -720,6 +740,9 @@ body {
   line-height: 34px;
   letter-spacing: 2px;
   text-align: center; }
+.stand .stand__title,
+.stand .stand__title[class*="span"] {
+  width: 100%; }
 #standForFocus1 h2 { color:var(--orange); }
 
 #standForFocus2 { background:var(--orange); }
@@ -753,7 +776,7 @@ body {
   color: var(--darkblue); }
 .message__focus, 
 .message .message__focus[class*="span"] {
-  width: 80%;
+  width: 90%;
   position: relative;
   margin: 0 auto;
   margin-bottom: 8rem;
@@ -787,19 +810,20 @@ body {
 .right .message__copy,
 .right .message__image {
   margin-right: auto;
-  right: 0; }
+  right: 0;
+  top: 0; }
 .message__body, 
-.message__body[class*="body"],
+.message__body[class*="body"] {
+  width: 85%; }
 .message__identity,
 .message__identity[class*="span"],
 .message__copy,
 .message__copy[class*="span"] {
-  width: 82.5%; }
+  width: 75%; }
 .message__image, 
 .message .message__image[class*="span"] {
   position: absolute;
-  width: 25vw;
-  height: 25vw;
+  height: 100%;
   object-fit: cover;
   border-radius: 50%;
   padding: 0;
