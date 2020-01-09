@@ -1,0 +1,90 @@
+<!--HEADER-->
+<div class="header">
+    <div class="header__logo">
+      <img src="https://cdn2.hubspot.net/hubfs/5213739/2019%20Year%20in%20Review%20Landing%20Page/blue@2x.png" alt="Dialogue logo" />
+    </div>
+    <nav class="header__nav">
+      <ul>
+        <li><a href="#byTheNumbers">By the Numbers</a></li>
+        <li><a href="#innovationBest">Innovation</a></li>
+        <li><a href="#memorableTestimonials">Member Stories</a></li>
+        <li><a href="#lifeDialogue">Life at Dialogue</a></li>
+        <li><a href="#messageLeaders">Leader Messages</a></li>
+      </ul>
+    </nav>
+    <nav role="navigation" id="menuToggle" class="mobile__nav">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <li><a href="#byTheNumbers">By the Numbers</a></li>
+          <li><a href="#innovationBest">Innovation</a></li>
+          <li><a href="#memorableTestimonials">Member Stories</a></li>
+          <li><a href="#lifeDialogue">Life at Dialogue</a></li>
+          <li><a href="#messageLeaders">Leader Messages</a></li>
+        </ul>
+    </nav>
+ </div>
+<!--FOOTER-->
+<div class="footer dark flex-v">
+    <img src="{{ module.image_src.href }}" alt="Dialogue Health" />
+    <h3>{% inline_rich_text field="richtext_field" value="{{ module.richtext_field }}" %}</h3>
+</div>
+
+
+<!--BY THE NUMBERS-->
+<div id="selected{{ module.number_field }}" class="numbers__selected--item">
+    <img src="{{ module.image_url_field.href }}" alt="Placeholder" />
+    <h4>{% inline_text field="focus_field" value="{{ module.focus_field }}" %}</h4>
+    <h2>{% inline_text field="header_field" value="{{ module.header_field }}" %}</h2>
+</div>
+<div id="item{{ module.id_field }}" class="numbers__icon--item">
+    <a href="#byTheNumbersMain">
+        <h5>{% inline_text field="name_field" value="{{ module.name_field }}" %}</h5>
+        <div class="numbers__item--svg flex-v">{% inline_rich_text field="svg_field" value="{{ module.svg_field }}" %}</div>
+    </a>
+</div>
+<div id="selected{{ module.number_field }}" class="numbers__selected--item">
+    <img src="{{ module.image_url_field.href }}" alt="Placeholder" />
+    <h4>{% inline_text field="focus_field" value="{{ module.focus_field }}" %}</h4>
+    <h2>{% inline_text field="header_field" value="{{ module.header_field }}" %}</h2>
+</div>
+
+
+<!--CTA BUTTON-->
+<button class="cta__button cta__button--{{ module.class }}">
+    <a href="{{ module.url_field.href }}">{{ module.cta_text }}</a>
+</button>
+
+
+<!--WHAT WE STAND FOR-->
+<div id="standForFocus{{ module.id_number_field }}" class="stand__focus flex-v transition">
+    <h2 class="main__title stand__title">{% inline_text field="header_field" value="{{ module.header_field }}" %}</h2>
+    <div class="main__copy stand__copy">{% inline_text field="sub_copy_field" value="{{ module.sub_copy_field }}" %}</div>
+    <div class="stand__border">{% inline_rich_text field="border_field" value="{{ module.border_field }}" %}</div>
+</div>
+<div id="standPinTrigger"></div>
+
+
+<!--LEADER MESSAGES-->
+<div class="message__focus left flex-v">
+    <img class="message__image" src="{{ module.image_url.href }}">
+    <div class="message__body">
+      <div class="message__identity">
+        <h4 class="message__name">{% inline_text field="name_text_field" value="{{ module.name_text_field }}" %}</h4>
+        <h6 class="message__title">{% inline_text field="title_text_field" value="{{ module.title_text_field }}" %}</h6>
+      </div>
+      <h5 class="message__copy">{% inline_rich_text field="message_body_field" value="{{ module.message_body_field }}" %}</h5>
+    </div>
+  </div>
+  <div class="message__focus right flex-v">
+    <div class="message__body">
+      <div class="message__identity">
+        <h4 class="message__name">{% inline_text field="name_text_field" value="{{ module.name_text_field }}" %}</h4>
+        <h6 class="message__title">{% inline_text field="title_text_field" value="{{ module.title_text_field }}" %}</h6>
+      </div>
+      <h5 class="message__copy">{% inline_rich_text field="message_body_field" value="{{ module.message_body_field }}" %}</h5>
+    </div>
+    <img class="message__image" src="{{ module.image_url.href }}">
+  </div>
