@@ -88,47 +88,20 @@ function parallaxPinner(trigger, target, hook, dur) {
 };
 function revealInnovation() {
   var innovationTriggers = ["#innovation2Trigger","#innovation3Trigger","#innovation4Trigger","#innovation5Trigger","#innovation6Trigger"];
-  isActive( $("#innovation2Trigger"), $("#innovation2Trigger").children() );
-  isActive( $("#innovation3Trigger"), $("#innovation3Trigger").children() );
-  isActive( $("#innovation4Trigger"), $("#innovation4Trigger").children() );
-  isActive( $("#innovation5Trigger"), $("#innovation5Trigger").children() );
-  isActive( $("#innovation6Trigger"), $("#innovation6Trigger").children() );
   if ($("#innovationBest")[0].classList.contains("active")) {
     innovationTriggers.forEach(function(current,i) {
+      isActive( $(current), $(current).children() );
       if ($(current)[0].classList.contains("active")) {
-        console.log(current);
+        var num = parseInt(current.match(/\d+/g)[0]);
+        var remove = function remove(el) { el.classList.remove("active") };
+        var add = function add(el) { el.classList.add("active") };
+        remove($("#innovation"+(num-1)+"Screen")[0]), add($("#innovation"+num+"Screen")[0]);
+        if (num >= 2) {
+          remove($("#innovation"+(num)+"Trigger")[0]);
+          if (num >= 4) remove($("#innovation"+(num-3))[0]), add($("#innovation"+num)[0]);
+        };
       };
     });
-    if ($("#innovation2Trigger")[0].classList.contains("active")) {
-      $("#innovation1Screen")[0].classList.remove("active");
-      $("#innovation2Screen")[0].classList.add("active");
-    };
-    if ($("#innovation3Trigger")[0].classList.contains("active")) {
-      $("#innovation2Trigger")[0].classList.remove("active");
-      $("#innovation2Screen")[0].classList.remove("active");
-      $("#innovation3Screen")[0].classList.add("active");
-    };
-    if ($("#innovation4Trigger")[0].classList.contains("active")) {
-      $("#innovation3Trigger")[0].classList.remove("active");
-      $("#innovation1")[0].classList.remove("active");
-      $("#innovation4")[0].classList.add("active");
-      $("#innovation3Screen")[0].classList.remove("active");
-      $("#innovation4Screen")[0].classList.add("active");
-    };
-    if ($("#innovation5Trigger")[0].classList.contains("active")) {
-      $("#innovation4Trigger")[0].classList.remove("active");
-      $("#innovation2")[0].classList.remove("active");
-      $("#innovation5")[0].classList.add("active");
-      $("#innovation4Screen")[0].classList.remove("active");
-      $("#innovation5Screen")[0].classList.add("active");
-    };
-    if ($("#innovation6Trigger")[0].classList.contains("active")) {
-      $("#innovation5Trigger")[0].classList.remove("active");
-      $("#innovation3")[0].classList.remove("active");
-      $("#innovation6")[0].classList.add("active");
-      $("#innovation5Screen")[0].classList.remove("active");
-      $("#innovation6Screen")[0].classList.add("active");
-    };
   };
 };
 /*======================================
