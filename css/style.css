@@ -48,22 +48,52 @@ body {
   padding: 0;
   float: none;
   z-index: 999; }
+.main__copy p, 
+.main__copy p[class*="span"], 
+.row-fluid .main__copy p[class*="span"]:first-child {
+  padding-bottom: 1rem; }
 .copy__left, 
 .copy__left[class*="span"],
 .copy__left .main__copy[class*="span"],
 .copy__left .row-fluid .main__copy[class*="span"]:first-child {
   margin-left: 0; }
+.main__cta,
+.main__cta[class*="span"],
+.main__cta[class*="span"]:first-child {
+  padding-top: 5rem;
+  text-align: center; }
 .cta__button,
 .cta__button[class*="span"],
 .cta__button[class*="span"]:first-child {
   min-width: 200px;
   min-height: 55px;
   border-radius: 10px;
-  background: white;
   border: none;
   outline: none;
   text-align: center;
   margin: 0 auto; }
+.cta__button a,
+.cta__button a[class*="span"],
+.cta__button a[class*="span"]:first-child {
+  padding: 20px 135px;
+  font-weight: 700;
+  letter-spacing: 0.5px; }
+.light .cta__button,
+.light .cta__button[class*="span"],
+.light .cta__button[class*="span"]:first-child {
+  background: var(--darkblue) }
+.light .cta__button a,
+.light .cta__button a[class*="span"],
+.light .cta__button a[class*="span"]:first-child {
+  color: var(--lightblue); }
+.dark .cta__button,
+.dark .cta__button[class*="span"],
+.dark .cta__button[class*="span"]:first-child {
+  background: var(--lightblue); }
+.dark .cta__button a,
+.dark .cta__button a[class*="span"],
+.dark .cta__button a[class*="span"]:first-child {
+  color: var(--darkblue); }
 
 /*=====================HERO======================*/
 .hero {
@@ -389,9 +419,15 @@ body {
   position: relative;
   z-index: 1; }
 .mental .mental__foreground {
+  display: none;
   position: relative;
   text-align: center;
   z-index: 1; } 
+.mental .mental__cta, 
+.mental .mental__cta[class*="span"], 
+.mental .mental__cta[class*="span"]:first-child{
+  padding-top: 3rem; 
+  padding-bottom: 7rem; }
 .mental .mental__foreground div.mental__image--spacer {
   height: 5rem; }
 .mental .mental__focus {  }
@@ -425,7 +461,7 @@ body {
 .security .main__title h2 {
   color: var(--yellow); }
 .security .security__foreground {
-  padding-top: 7rem;
+  padding-top: 3rem;
   text-align: center; }
 .security .security__foreground img {
   height: 160px;
@@ -468,7 +504,7 @@ body {
 /*=====================INNOVATION===============*/
 .innovation,
 .innovation[class*="span"] {
-  height: 398vh;
+  height: 698vh;
   padding-bottom: 0;
   background: transparent; }
 .innovation .main__title h2 {
@@ -478,6 +514,11 @@ body {
   position: relative;
   width: auto;
   padding-top: 10px; }
+.innovation .innovation__phone {
+  margin-bottom: 0;
+  text-align: center; }
+.innovation .innovation__phone .innovation__img--container {
+  box-shadow: 0px 80px 45px 6px #666; }
 .innovation .innovation__screen,
 .innovation .innovation__screen[class*="span"] {
   position: absolute;
@@ -491,6 +532,7 @@ body {
   z-index: -1;
   overflow: hidden; }
 .innovation .innovation__screen img {
+  display: none;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -498,11 +540,12 @@ body {
   top: 0;
   object-fit: cover;
   background-color: var(--midblue); }
-.innovation .innovation__phone {
-  margin-bottom: 0;
-  text-align: center; }
-.innovation .innovation__phone .innovation__img--container {
-  box-shadow: 0px 80px 45px 6px #666; }
+.innovation .innovation__screen img.active {
+  display: block; }
+
+#innovation1Screen { transform:scale(1.15); margin-top:-10px; }
+#innovation4Screen { margin-top:-5px; }
+
 .innovation .innovation__copy {
   padding-left: 5%; }
 .innovation .innovation__copy .main__copy,
@@ -561,7 +604,8 @@ body {
   width: 100%;
   margin-right: auto; }
 .innovation .innovation__focus {
-  height: auto !important; }
+  height: auto !important;
+  z-index: 0; }
 .innovation .innovation__background {
   position: absolute;
   width: 100%;
@@ -580,8 +624,10 @@ body {
   right: 0;
   width: 100px;
   height: 5px; }
-#innovation4Trigger { top:50%; }
-#innovation5Trigger { top:70%; }
+#innovation2Trigger { top:30%; }
+#innovation3Trigger { top:45%; }
+#innovation4Trigger { top:65%; }
+#innovation5Trigger { top:80%; }
 #innovation6Trigger { top:90%; }
 
 /*=====================TESTIMONIALS===============*/
