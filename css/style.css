@@ -71,7 +71,9 @@ body {
   border: none;
   outline: none;
   text-align: center;
-  margin: 0 auto; }
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;}
 .cta__button a,
 .cta__button a[class*="span"],
 .cta__button a[class*="span"]:first-child {
@@ -222,6 +224,9 @@ body {
   stroke: var(--darkblue); }
 .active .numbers__item--svg svg {
   stroke-width: 7px; }
+/*IE Support*/
+.ie .numbers__item--svg svg {
+  margin-top: 15px; }
 
 /*=====================FUELING=====================*/
 .fueling,
@@ -461,6 +466,7 @@ body {
 .security,
 .security[class*="span"] {
   overflow: hidden;
+  padding-bottom: 8rem;
   background: var(--darkblue); }
 .security .security__main {
   position: relative; }
@@ -469,11 +475,12 @@ body {
 .security .security__main--copy {
   position: relative; }
 .security .security__foreground {
-  top: 40%;
+  bottom: -10%;
+  left: 7px;
   position: absolute;
   text-align: center;
   z-index: 0;
-  opacity: 0.175;
+  opacity: 0.55;
   pointer-events: none;
   user-select: none; }
 .security .security__foreground img {
@@ -551,7 +558,6 @@ body {
   z-index: -1;
   overflow: hidden; }
 .innovation .innovation__screen img {
-  /*display: none;*/
   opacity: 0;
   position: absolute;
   width: 100%;
@@ -567,13 +573,19 @@ body {
   transition: all .5s;
   transition-timing-function: cubic-bezier(0.25, 0.25, 0.005, 1); }
 .innovation .innovation__screen img.active {
-  /*display: block;*/
   height: 100%;
   opacity: 1; }
+.innovation .innovation__screen a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer; }
 
 #innovation2Screen { object-fit:contain; height:auto; } 
-#innovation3Screen { object-fit:contain; height:auto; margin-top:-25px; }
+#innovation3Screen { object-fit:contain; height:auto; }
 #innovation4Screen { margin-top:-5px; }
+#innovation5Screen { height:auto; width:100%; object-fit:contain; }
+#innovation6Screen { height:auto; object-fit: scale-down; }
 
 .innovation .innovation__copy {
   padding-left: 5%; }
@@ -645,9 +657,13 @@ body {
   pointer-events: none; }
 .innovation .innovation__bg--item {
   position: absolute;
+  width: 100%;
   opacity: 0.5 }
-.innovation .innovation__bg--left { width:50vw; left:-15vw; top:75vh; }
-.innovation .innovation__bg--right { width:60vw; right:-20vw; bottom:-77vh; }
+#innovationBg1 { position:absolute; width:50vw; left:-15vw; top:75vh; }
+#innovationBg2 { position:absolute; width:60vw; right:-20vw; top:195vh; }
+#innovationBg3 { position:absolute; width:40vw; left:27vw; top:365vh; opacity:0.35; }
+#innovationBg4 { position:absolute; width:45vw; right:-12vw; top:489vh; }
+#innovationBg5 { position:absolute; width:40vw; left:27vw; top:600vh; opacity:0.35; }
 .innovation .innovation__trigger {
   position: absolute;
   right: 0;
@@ -658,6 +674,20 @@ body {
 #innovation4Trigger { top:65%; }
 #innovation5Trigger { top:80%; }
 #innovation6Trigger { top:90%; }
+
+/*IE Support*/
+.ie .innovation .innovation__img {
+  float: left;
+  margin-left: -15%; }
+.ie .innovation .innovation__point--item .spacer {
+  display: none; }
+.ie .innovation .innovation__point--item .focus img {
+  display: inline-block;
+  width: auto;
+  height: 50px;
+  min-width: 1px;
+  min-height: 1px; }
+.ie #innovation4Screen { height:auto; margin-top:-30px; }
 
 /*=====================TESTIMONIALS===============*/
 .testimonials,
@@ -752,6 +782,7 @@ body {
   height: 2px;
   background: var(--yellow);
   margin: 35px 0;
+  margin-right: auto;
   border: 0;
   outline: 0; }
 .life .bamboo .fit-img {
@@ -778,6 +809,20 @@ body {
 .life .bamboo-next {
   right: 0;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4Mi44MjgiIGhlaWdodD0iNDUuNjU3IiB2aWV3Qm94PSIwIDAgODIuODI4IDQ1LjY1NyI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTc4LjUgLTc5NTYuNjcxKSI+PGxpbmUgeDI9Ijc1IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4MC41IDc5NzkuNSkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZGQ5MiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utd2lkdGg9IjQiLz48bGluZSB5MT0iMjAiIHgyPSIyMCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTM4LjUgNzk3OS41KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZkZDkyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS13aWR0aD0iNCIvPjxsaW5lIHgyPSIyMCIgeTI9IjIwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzguNSA3OTU5LjUpIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmRkOTIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI0Ii8+PC9nPjwvc3ZnPg=="); }
+
+/*IE Support*/
+.ie .life, .ie .life[class*='span'] {
+  height: 100vh; }
+.ie .life .bamboo .fit-img {
+  float: right;
+  left: 0;
+  min-height: 1px; }
+.ie .life .life__slide--copy {
+  float: left; }
+.ie .bamboo-navigation {
+  float: left; 
+  bottom: 20%;
+  margin: 0; }
 
 /*=====================STAND======================*/
 .stand,
