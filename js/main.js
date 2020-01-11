@@ -1,10 +1,3 @@
-var removeWidows = function removeWidows() {
-  $('h2, h3, h4').each(function(i,d) {
-    if (!$(this).parent()[0].classList.contains("stand__focus")) {
-      $(d).html( $(d).text().replace(/\s(?=[^\s]*$)/g, "&nbsp;") )   
-    };
-  });
-};
 var navActive = function navActive() {
   var nav = $('.header');
   $(window).scrollTop() > 100 ? nav.addClass('active') : nav.removeClass('active');
@@ -80,9 +73,7 @@ function parallaxPinner(trigger, target, hook, dur) {
         triggerElement: $(trigger)[0],
         triggerHook: (hook),
         duration: (dur + '%')
-      })
-      .setPin($(target)[0])
-      .addTo(controller);
+      }).setPin($(target)[0]).addTo(controller);
       $($(target)[0]).addClass("active");
 	})();
 };
@@ -93,8 +84,8 @@ function revealInnovation() {
       isActive( $(current), $(current).children() );
       if ($(current)[0].classList.contains("active")) {
         var num = parseInt(current.match(/\d+/g)[0]);
-        var remove = function remove(el) { el.classList.remove("active") };
-        var add = function add(el) { el.classList.add("active") };
+        var remove = function remove(el) {el.classList.remove("active")};
+        var add = function add(el) {el.classList.add("active")};
         remove($("#innovation"+(num-1)+"Screen")[0]), add($("#innovation"+num+"Screen")[0]);
         if (num >= 2) {
           remove($("#innovation"+(num)+"Trigger")[0]);
@@ -108,7 +99,7 @@ function revealInnovation() {
  * =====================================
  * =========== INITIALIZER =============
  * =====================================
- * ==================================*/
+ * ===================================*/
 var w = $(window).width();
 var scrollInit = function eventlInit() {
   $(window).scroll(function() {
@@ -130,12 +121,8 @@ var clickInit = function clickInit() {
     scrollElement( this.children[0], 100, 250 );
   });
 };
-var resizeInit = function resizeInit() {
-  //removeWidows();
-};
 var baseInit = function baseInit() {
   navActive();
-  //removeWidows();
   $("#selected1").parent().parent().addClass("active");
   $("#item1").addClass("active");
   $("#innovationFocus").children()[0].children[0].classList.add("flex-h");
@@ -199,7 +186,6 @@ var standInit = function standInit() {
     events: {
       0: scrollInit(),
       1: clickInit(),
-      2: resizeInit(),
       3: baseInit()
     },
     slider: {
