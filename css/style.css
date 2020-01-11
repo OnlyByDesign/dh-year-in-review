@@ -105,6 +105,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed; }
 .hero .hero__subtitle {
+  font-family: var(--rt-medium);
   font-size: calc(22px + (32 - 22) * ((100vw - 300px) / (1900 - 300)));
   font-weight: 500;
   letter-spacing: 2px;
@@ -122,6 +123,7 @@ body {
 .hero .hero__sub[class*="span"] {
   text-align: center; }
 .hero .hero__sub span {
+  font-family: 'Raleway', sans-serif;
   font-size: 20px;
   font-weight:400;
   letter-spacing: 1px;
@@ -460,15 +462,22 @@ body {
 .security[class*="span"] {
   overflow: hidden;
   background: var(--darkblue); }
+.security .security__main {
+  position: relative; }
 .security .main__title h2 {
   color: var(--yellow); }
+.security .security__main--copy {
+  position: relative; }
 .security .security__foreground {
-  position: relative;
-  padding-top: 3rem;
-  text-align: center; }
+  top: 40%;
+  position: absolute;
+  text-align: center;
+  z-index: 0;
+  opacity: 0.175;
+  pointer-events: none;
+  user-select: none; }
 .security .security__foreground img {
-  height: 160px;
-  max-width: 90%;
+  width: 40%;
   object-fit: contain; }
 .security .security__foreground a {
   position: absolute;
@@ -807,6 +816,11 @@ body {
   text-align: left;
   vertical-align: top;
   padding-top: 5px; }
+.stand .quote__name--main h6 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 1px; }
 .stand__focus {
   height: 100vh;
   position: relative;
@@ -816,7 +830,7 @@ body {
   padding-bottom: .75rem; }
 .stand__copy,
 .stand .stand__copy {
-  font-family: 'rt_ralewaymedium', sans-serif;
+  font-family: var(--rt-medium);
   width: 425px;
   font-size: 20px;
   padding-top: .25rem;
@@ -870,7 +884,7 @@ body {
 .message__identity {
   padding-bottom: 1.5rem; }
 .message__identity h4 {
-  font-family: 'rt_ralewaybold', sans-serif;
+  font-family: var(--rt-bold);
   padding-bottom: 5px; }
 .message__identity h4, 
 .message__identity h6 {
@@ -878,7 +892,8 @@ body {
   letter-spacing: 1.5px; }
 .message__copy p,
 .message__copy [class*="span"] {
-  font-family: 'rt_ralewaylight', sans-serif; }
+  font-family: var(--rt-light);
+  font-size: 18px; }
 .message__body, 
 .message .message__body[class*="span"] {
   z-index: 1;
