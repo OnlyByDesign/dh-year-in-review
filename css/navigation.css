@@ -8,7 +8,7 @@
   transition-timing-function: cubic-bezier(0.25, 0.25, 0.005, 1); }
 .header {
   width: 100%;
-  z-index: 999;
+  z-index: 99999999;
   padding-top: 10px;
   position: fixed;
   background: transparent; }
