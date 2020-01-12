@@ -69,7 +69,7 @@ h4 {
 }
 h5, p {
   font-family: var(--rt-regular);
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: .11rem;
   font-style: normal;
   line-height: 36px;
@@ -179,7 +179,15 @@ html, body {
   
 }
 @media screen and (max-width: 700px) {
-  
+  h2 {
+    font-family: var(--rt-bold);
+    font-size: 52px;
+    letter-spacing: -1px;
+    word-break: break-word; 
+  }
+  h4 {
+    font-size: 20px; 
+  }
 }
 @media screen and (max-width: 500px) {
 

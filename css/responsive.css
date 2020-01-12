@@ -9,6 +9,32 @@
     margin-left: 2%; }
 }
 
+@media only screen and (max-width:1300px) {
+  .message__body, .message__body[class*="body"] {
+        width: 62.5%;
+    padding: 0;
+    margin: 0;
+    background: 0;
+    margin-left: auto;
+    margin-right: unset;
+    float: right;
+    right: 0; }
+  .message .message__copy {
+    width: 100%;
+    min-height: 100%; }
+  .message__identity, .message__identity[class*="span"], .message__copy, .message__copy[class*="span"] {
+    width: 100%; }
+ .right .message__image, .message__image, .message .message__image[class*="span"] {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+   top: 0;
+   left: 0;
+    right: unset;
+   float:left;
+    text-align: center; }
+}
+
 @media only screen and (max-width:1250px) {
   .hero {
     border-radius: 0 0 15rem 0; }
@@ -31,10 +57,22 @@
 @media only screen and (max-width: 1024px) {
   .fueling, .fueling[class*="span"] {
     border-radius: 5rem 5rem 0 0; }
+  .fueling__bg--item {
+    width: 40%; }
+  .fueling__bg--right {
+    right: -15%; }
+  .fueling__bg--left {
+    left: -15%; }
   .main__title--group, 
   .main__title--group[class*="span"], 
   .main__title--group[class*="span"]:first-child {
     padding-bottom: 5rem; }
+  .security .security__foreground {
+    bottom: -13%; }
+  .security .security__foreground img {
+    width: 75%; }
+  .testimonials .bamboo {
+    height: 75vh; }
   .life .bamboo.fade>.slides>* {
     min-height: 90vh;
     max-height: 90vh; }
@@ -81,6 +119,16 @@
     display: none; }
   .innovation .innovation__bg--left { width:85vw; top:90vh; }
   .innovation .innovation__bg--right { width:100vw; bottom:-20vh; }
+  .message__focus, .message .message__focus[class*="span"] {
+    margin-bottom: 5rem; }
+  .right .message__image, .message__image, .message .message__image[class*="span"] {
+    display: none;  }
+  .message__identity h4, .message__identity h6 {
+    display: inline-block; }
+  .message__identity h6 {
+    padding-left: 15px; }
+  .message__body, .message__body[class*="body"] {
+    width: 100%; }
 }
 
 @media only screen and (max-width: 850px) {
@@ -90,9 +138,20 @@
    width:90%; }
   .numbers .numbers__select .row-depth-1 {
     flex: 1 0 30%; }
+  .testimonial__icon {
+    display: none; }
 }
 
 @media only screen and (max-width:768px) {
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden; }
+  .cta__button a, .cta__button a[class*="span"], .cta__button a[class*="span"]:first-child {
+    padding: 0; }
+  .main, .main[class*="span"] {
+    min-height: 100%; }
+  .fueling .fueling__fg, .fueling .fueling__fg[class*="span"] {
+    bottom: -5rem; }
   .mental .mental__foreground img.mental__image--fg {
     width:75% }
   .mental .mental__background {
@@ -101,21 +160,80 @@
     margin-top: -4%; }
   .mental .mental__parallax:nth-child(4) {
     margin-top: -4%; }
+  .security .security__foreground {
+    bottom: -10.5%; }
+  .security .security__foreground img {
+    width: 90%; }
+  .innovation, .innovation[class*="span"] {
+    height: 100%;
+    padding-bottom: 5rem; }
   .innovation .innovation__copy.copy__left,
   .innovation .innovation__copy.copy__left[class*="span"] {
     width: 80%; }
+  .innovation .innovation__point--item, .innovation .innovation__point--item[class*="span"] {
+    padding: 10% 0 0 0;
+    height: auto;
+    visibility: visible;
+    opacity: 1; }
+  #innovationBg1 {
+    width: 50%;
+    top: -60%; }
+  #innovationBg2 {
+    right: -7vw;
+    top: 85%; }
+  #innovationBg3, #innovationBg4, #innovationBg5 {
+    display: none; }
+  .life, .life[class*="span"] {
+    height: 110vh;
+    padding-bottom: 0; }
   .life .life__slide--copy {
     width: 100%; }
   .life .bamboo-navigation {
     width: 90%; }
-}
-
-@media only screen and (max-width:767px) {
-  .rewarding .rewarding__numbers {
+  .footer h3, .footer[class*="span"] h3 {
+    width: 90%;
+    margin: 0 auto; }
+  .footer h3 br, .footer[class*="span"] h3 br {
     display: none; }
 }
 
+@media only screen and (max-width:767px) {
+  .header-container-wrapper, .header {
+    padding: 0; }
+  .header__logo img {
+    max-width: 200px; }
+  .cta__button, .cta__button[class*="span"], .cta__button[class*="span"]:first-child {
+    width: 90%; }
+  .security .security__foreground {
+    display: none; }
+  .rewarding .rewarding__numbers {
+    display: none; }
+  .innovation .innovation__point--item img {
+    min-width: 75px;
+    max-width: 75px;
+    min-height: 75px;
+    max-height: 75px;
+    margin: 0 auto; }
+  .innovation .innovation__point--item p {
+    float: left;
+    padding-top: 15px;
+    -ms-flex-basis: unset;
+    flex-basis: unset; }
+  .testimonials .bamboo {
+    height: 110vh; }
+  .testimonials .bamboo>.slides>* {
+    padding: 0; }
+  .life, .life[class*="span"] {
+    height: 100%; }
+  .life .slideshow {
+    height: 90vh; }
+  .life .bamboo-navigation {
+    bottom: 5%; }
+}
+
 @media only screen and (max-width: 600px) {
+  #menuToggle {
+    right: 30px; }
   .main__subtitle, .main__subtitle[class*="span"], .main__subtitle[class*="span"]:first-child {
     max-width: 90%; }
   .hero .hero__sub, .hero .hero__sub[class*="span"] {
@@ -125,6 +243,20 @@
     font-size: 20px; }
   #fuelingFg {
     width: 90%; }
+  .mental .mental__parallax:nth-child(1) {
+    left: 2%; }
+  .innovation .innovation__background {
+    display: none; }
+  .testimonials .bamboo {
+    height: 210vh; }
+  .testimonials .bamboo .slides p span.name {
+    text-align: left; }
+  .bamboo .bamboo-dots {
+    display: none; }
+  .bamboo .bamboo-prev {
+    left: 5%; }
+  .bamboo .bamboo-next {
+    right: 5%; }
   .life .slideshow {
     height: 90vh; }
   .life .bamboo.fade>.slides>* {
@@ -132,13 +264,15 @@
     max-height: auto; }
   .life .life__slide--copy {
     padding: 10% 2.5%; }
-  .life .bamboo-navigation {
-    bottom: -12.5%; }
   .stand .main__copy, .stand .main__copy[class*="span"], .stand .main__copy[class*="span"]:first-child {
     padding-top: 0; }
   .stand .main__copy h4.copy {
     font-size: 18px;
     text-align: left; }
+  .message__identity h4, .message__identity h6 {
+    display: block; }
+  .message__identity h6 {
+    padding: 0; }
 }
 
 @media only screen and (max-width:500px) {
@@ -148,6 +282,13 @@
   .stand__copy, 
   .stand .stand__copy {
     width: 90%; }
+}
+
+@media only screen and (max-width: 450px) {
+  .testimonials .bamboo {
+    height: 145vh; }
+  .life .slideshow {
+    height: 110vh; }
 }
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -277,5 +418,7 @@ iPad 3
 }
 
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
-/* Styles */
+  .testimonials .bamboo {
+      height: 210vh;
+  }
 }
