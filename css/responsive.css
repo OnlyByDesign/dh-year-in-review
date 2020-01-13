@@ -248,8 +248,12 @@
 }
 
 @media only screen and (max-width: 600px) {
+  #menu {
+    width: 102vw; }
   #menuToggle {
     right: 30px; }
+  #menuToggle input:checked ~ ul {
+    transform: translate(-96%,0); }
   .main__subtitle, .main__subtitle[class*="span"], .main__subtitle[class*="span"]:first-child {
     max-width: 90%; }
   .hero .hero__sub, .hero .hero__sub[class*="span"] {
