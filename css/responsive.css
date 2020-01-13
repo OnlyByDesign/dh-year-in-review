@@ -68,9 +68,7 @@
   .main__title--group[class*="span"]:first-child {
     padding-bottom: 5rem; }
   .security .security__foreground {
-    bottom: -13%; }
-  .security .security__foreground img {
-    width: 75%; }
+    display: none; }
   .testimonials .bamboo {
     height: 75vh; }
   .life .bamboo.fade>.slides>* {
@@ -115,8 +113,6 @@
   .innovation .innovation__copy[class*="span"] {
     width: 75%;
     padding: 0; }
-  .security .security__background {
-    display: none; }
   .innovation .innovation__bg--left { width:85vw; top:90vh; }
   .innovation .innovation__bg--right { width:100vw; bottom:-20vh; }
   .message__focus, .message .message__focus[class*="span"] {
@@ -164,10 +160,13 @@
     margin-top: -4%; }
   .mental .mental__parallax:nth-child(4) {
     margin-top: -4%; }
-  .security .security__foreground {
-    bottom: -10.5%; }
-  .security .security__foreground img {
-    width: 90%; }
+  .security__background--item svg { width:100%; }
+  #securityBg1 { top:-17vh; left:2vw; }
+  #securityBg2 { top:14vh; left:1vw; width:110%; }
+  #securityBg3 { top:42vh; right:-29vw; width:185%; }
+  #securityBg4 { top:-3vh; right:3vw; }
+  #securityBg5 { top:5vh; left:4vw; width:40%; }
+  #securityBg6 { top:26vh; width:130%; right:-10vw; }
   .innovation, .innovation[class*="span"] {
     height: 100%;
     padding-bottom: 5rem; }
@@ -213,8 +212,6 @@
     max-width: 200px; }
   .cta__button, .cta__button[class*="span"], .cta__button[class*="span"]:first-child {
     width: 90%; }
-  .security .security__foreground {
-    display: none; }
   .rewarding .rewarding__numbers {
     display: none; }
   .innovation .innovation__point--item img {
@@ -298,6 +295,17 @@
 }
 
 @media only screen and (max-width:500px) {
+  .fueling .fueling__fg, .fueling .fueling__fg[class*="span"] {
+    bottom: -2rem; }
+  .security__background--item svg { width:auto; }
+  #securityBg1 { top:-17vh; left:2vw; }
+  #securityBg2 { display:none; }
+  #securityBg3 { top:53vh; right:-24vw; width:185%; }
+  #securityBg4 { display:none; }
+  #securityBg5 { top:27vh; left:4vw; width:40%; }
+  #securityBg6 { top:9vh; right:39vw; width:130%; }
+  .testimonials .bamboo {
+    height: 115vh; }
   .life, 
   .life[class*="span"] {
     height: 100%; }
