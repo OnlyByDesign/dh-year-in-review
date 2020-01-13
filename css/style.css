@@ -474,16 +474,16 @@
   .security .security__main--copy {
     position: relative; }
   .security .security__foreground {
-    bottom: -10%;
+    bottom: 12.5%;
     left: 7px;
     position: absolute;
     text-align: center;
     z-index: 0;
-    opacity: 0.55;
+    opacity: .2;
     pointer-events: none;
     user-select: none; }
   .security .security__foreground img {
-    width: 40%;
+    width: 30%;
     object-fit: contain; }
   .security .security__foreground a {
     position: absolute;
@@ -529,7 +529,7 @@
   /*=====================INNOVATION===============*/
   .innovation,
   .innovation[class*="span"] {
-    height: 698vh;
+    height: 695vh;
     padding-bottom: 0;
     background: transparent; }
   .innovation .main__title h2 {
@@ -543,6 +543,7 @@
     margin-bottom: 0;
     text-align: center; }
   .innovation .innovation__phone .innovation__img--container {
+    height: 85vh;
     box-shadow: 0px 80px 45px 6px #666; }
   .innovation .innovation__screen,
   .innovation .innovation__screen[class*="span"] {
@@ -589,7 +590,7 @@
   #innovation3Screen { object-fit:contain; height:auto; }
   #innovation4Screen { margin-top:-5px; }
   #innovation5Screen { height:auto; width:100%; object-fit:contain; }
-  #innovation6Screen { height:auto; object-fit: scale-down; }
+  #innovation6Screen { height:auto; /*object-fit: scale-down;*/ }
   
   .innovation .innovation__copy {
     padding-left: 5%; }
@@ -634,9 +635,9 @@
     margin-left: 24px;
     margin-bottom: 15px;
     /*border-left: 3px solid var(--darkblue);*/ } 
-  /*.innovation .en .innovation__point--item .spacer {
+  .innovation .en .innovation__point--item .spacer {
     height: 30px;
-    border-left: 3px solid var(--darkblue); }*/
+    border-left: 3px solid var(--darkblue); }
   .innovation .innovation__point--item img {
     min-width: 50px;
     max-width: 50px;
@@ -701,12 +702,13 @@
   /*=====================TESTIMONIALS===============*/
   .testimonials,
   .testimonials[class*="span"] {
+    min-height: 100%;
     padding-bottom: 0;
     background: var(--lightblue); }
   .testimonials .main__title h2 {
     color: var(--darkblue); }
   .testimonials .bamboo {
-    height: 70vh; }
+    height: 55vh; }
   .testimonials .bamboo>.slides {
     height: 100%; }
   .testimonials .bamboo>.slides>* {
@@ -727,6 +729,8 @@
     text-align: center;
     font-style: italic;
     font-size: 22px; }
+  .testimonials .bamboo .bamboo-navigation {
+    bottom: 10%; }
   .testimonials .bamboo>.bamboo-prev {
     left: 20%;
     top: unset;
@@ -767,7 +771,8 @@
   /*=====================LIFE======================*/
   .life,
   .life[class*="span"] {
-    height: 120vh;
+    min-height: 100%;
+    padding-bottom: 0;
     background: var(--darkblue); }
   .life .main__title h2,
   .life .main__title h2[class*="span"] {
@@ -807,7 +812,7 @@
   .life .bamboo-navigation {
     width: 40%;
     right: unset;
-    bottom: 0;
+    bottom: 10%;
     left: 5%;
     vertical-align: bottom; } 
   .life .bamboo-navigation .focus {

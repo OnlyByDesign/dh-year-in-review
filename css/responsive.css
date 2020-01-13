@@ -38,6 +38,10 @@
 @media only screen and (max-width:1250px) {
   .hero {
     border-radius: 0 0 15rem 0; }
+  .security .security__foreground img {
+    width: 50%; }
+  .testimonials .bamboo {
+    height: 65vh; }
 }
 
 @media only screen and (max-width:1150px) {
@@ -88,8 +92,6 @@
     max-width: 100%;
     position: absolute;
     left: 0; }
-  .life .bamboo-navigation {
-    bottom: -10%; }
 }
   
 @media only screen and (max-width:1000px) {
@@ -152,6 +154,8 @@
     margin: 0 auto; }
   .fueling .fueling__fg, .fueling .fueling__fg[class*="span"] {
     bottom: -5rem; }
+  .rewarding .rewarding__numbers {
+    opacity: 0.5; }
   .mental .mental__foreground img.mental__image--fg {
     width:75% }
   .mental .mental__background {
@@ -186,18 +190,18 @@
     top: 85%; }
   #innovationBg3, #innovationBg4, #innovationBg5 {
     display: none; }
+  .testimonials .bamboo {
+    height: 90vh; }
   .life, .life[class*="span"] {
-    height: 72vh;
     padding-bottom: 0; }
   .life .slideshow {
-    height: 42vh; }
+    height: 55vh; }
+  .life .bamboo .fit-img {
+    margin-top: -17%; }
   .life .life__slide--copy {
     width: 100%; }
   .life .bamboo-navigation {
     width: 90%; }
-  .life .bamboo.fade>.slides>* {
-    min-height: 50vh;
-    max-height: 50vh; }
   .footer h3, .footer[class*="span"] h3 {
     width: 90%;
     margin: 0 auto; }
@@ -323,8 +327,6 @@
     height: 145vh; }
   .life .slideshow {
     height: 110vh; }
-  .testimonials .bamboo .bamboo-navigation {
-    bottom: 0; }
   .message__identity h4 {
     font-size: 24px; }
   .message__identity h6 {
@@ -381,10 +383,36 @@
     height: 40vh; }
   .life .bamboo .fit-img {
     top: -15%; }
+  .life .bamboo-navigation {
+    bottom: 0%; }
   .stand__focus {
     height: 50vh; }
   .footer img {
     margin-top: -65%; }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .hero {
+    height: 85vh; }
+  .innovation, .innovation[class*="span"] {
+    height: 685vh; }
+  .innovation .innovation__focus {
+    margin-top: unset !important; }
+  .innovation .innovation__phone .innovation__img--container {
+    height: 55vh; }
+  .innovation .innovation__img, .innovation .innovation__img[class*="span"], .innovation .innovation__img[class*="span"]:first-child {
+    position: absolute;
+    bottom: -215%;
+    height: unset; }
+  .innovation .innovation__copy.copy__left, .innovation .innovation__copy.copy__left[class*="span"] {
+    width: 75%;
+    float: none;
+    padding: 0; }
+  .life .bamboo-navigation {
+    bottom: -10%;}
+  .stand__focus {
+    height: 100vh; }
+  .footer img {
+    margin-top: 0; }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   .hero {
@@ -464,9 +492,13 @@ iPad 3
   .numbers .numbers__select .row-depth-1 {
     width: 48%; }
   .testimonials .bamboo {
-    height: 230vh; }
+    height: 245vh; }
   .life .slideshow {
     height: 130vh; }
+  .life .bamboo.fade>.slides>* {
+    height: 130vh; }
+  .life .bamboo .fit-img {
+    margin-top: 0; }
 }
 
 /* iPhone 6, 7, 8 ----------- */
@@ -495,7 +527,9 @@ iPad 3
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
   .testimonials .bamboo {
-    height: 135vh; }
+    height: 145vh; }
+  .testimonials .bamboo .bamboo-navigation {
+    bottom: 3%; }
   .life .slideshow {
     height: 90vh; }
 }
@@ -512,7 +546,7 @@ iPad 3
 /* Pixel 2 Portrait */
 @media screen and (min-device-width: 411px) and (max-device-height: 731px) and (orientation: portrait) {
  .testimonials .bamboo .bamboo-navigation {
-    bottom: 0; }
+    bottom: 5%; }
 }
 
 /* Pixel 2 Landscape */
@@ -525,7 +559,7 @@ iPad 3
   .testimonials .bamboo {
     height: 135vh; }
   .testimonials .bamboo .bamboo-navigation {
-    bottom: 0; }
+    bottom: 5%; }
   .life .slideshow {
     height: 80vh; }
 }
@@ -551,9 +585,11 @@ iPad 3
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) {
   .testimonials .bamboo {
-    height: 180vh; }
+    height: 190vh; }
   .testimonials .bamboo-navigation {
-    bottom: 0; }
+    bottom: 5% !important; }
+  .life .bamboo .fit-img {
+    margin-top: 0; }
 }
 /* Samsung Galaxy S5 ----------- */
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
