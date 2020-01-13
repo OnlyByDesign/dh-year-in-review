@@ -101,9 +101,9 @@ function revealInnovation() {
  * =====================================
  * ===================================*/
 var w = $(window).width();
-var scrollInit = function eventlInit() {
+var scrollInit = function scrollInit() {
   $(window).scroll(function() {
-    if ($(window).scrollTop() < 200) navActive();
+    navActive();
     isActive($(".fueling__fg"), $(".fueling__bg")); 
     isActive($(".rewarding__bars"), $("#rewardingGraphTrigger")); 
     isActive($("#innovationBest"), $("#innovationBest").children());
@@ -113,8 +113,11 @@ var scrollInit = function eventlInit() {
 var clickInit = function clickInit() {
   $(".header__nav ul li a, #menuToggle a").click(function(event) {
     event.preventDefault();
-    if ($(window).scrollTop() < 200) navActive();
+    navActive();
     scrollElement( this, 0, 500 );
+  });
+  $("#menuToggle a").click(function(event) {
+    $("#menuToggle input").prop("checked", false);
   });
   $(".numbers__icon--item").click(function() {
     swapActive( this, ".numbers__selected", "item", "selected" );
@@ -126,6 +129,7 @@ var baseInit = function baseInit() {
   $("#selected1").parent().parent().addClass("active");
   $("#item1").addClass("active");
   $("#innovationFocus").children()[0].children[0].classList.add("flex-h");
+  if (window.navigator.userAgent.indexOf("MSIE ") > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) $("body")[0].classList.add("ie");
 };
 var rewardInit = function rewardInit() {
   if (w >= 750) parallaxScroll( $("#rewardingParallax1"), -500, 0, 1, 200 );
@@ -146,9 +150,12 @@ var securityInit = function securityInit() {
   parallaxScroll( $("#securityBg6"), 100, 50, 0, 200 );
 };
 var innovationInit = function InnovationInit() {
-  parallaxScroll( $("#innovationBgL"), -250, 0, 1, 200 );
-  parallaxScroll( $("#innovationBgR"), -500, 0, 1, 200 );
-  parallaxPinner( $("#innovationFocus"), $("#innovationFocus"), 0.15, 585 );
+  if (w >= 769) parallaxScroll( $("#innovationBg1"), -250, 0, 1, 200 );
+  if (w >= 769) parallaxScroll( $("#innovationBg2"), -500, 0, 1, 200 );
+  if (w >= 769) parallaxScroll( $("#innovationBg3"), -500, 0, 1, 200 );
+  if (w >= 769) parallaxScroll( $("#innovationBg4"), -400, 0, 1, 200 );
+  if (w >= 769) parallaxScroll( $("#innovationBg5"), -300, 0, 1, 200 );
+  if (w >= 769) parallaxPinner( $("#innovationFocus"), $("#innovationFocus"), 0.15, 585 );
 };
 var testimonialInit = function testimonialInit() {
   bamboo(document.getElementById("testimonialSlider"), {
