@@ -130,6 +130,7 @@ var baseInit = function baseInit() {
   $("#item1").addClass("active");
   $("#innovationFocus").children()[0].children[0].classList.add("flex-h");
   if (window.navigator.userAgent.indexOf("MSIE ") > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) $("body")[0].classList.add("ie");
+  if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent) == true) $("body")[0].classList.add("osx");
 };
 var rewardInit = function rewardInit() {
   if (w >= 750) parallaxScroll( $("#rewardingParallax1"), -500, 0, 1, 200 );
