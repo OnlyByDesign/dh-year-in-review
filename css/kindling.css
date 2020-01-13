@@ -182,15 +182,18 @@ html, body {
   h2 {
     font-family: var(--rt-bold);
     font-size: 52px;
-    letter-spacing: -1px;
+    letter-spacing: 0;
     word-break: break-word; 
   }
   h4 {
     font-size: 20px; 
   }
+  p {
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 500px) {
-
+  
 }
 @media screen and (max-width: 450px) {
     

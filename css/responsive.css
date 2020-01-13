@@ -150,6 +150,10 @@
     padding: 0; }
   .main, .main[class*="span"] {
     min-height: 100%; }
+  .hero .hero__sub, .hero .hero__sub[class*="span"] {
+    width: 75%;
+    float: none;
+    margin: 0 auto; }
   .fueling .fueling__fg, .fueling .fueling__fg[class*="span"] {
     bottom: -5rem; }
   .mental .mental__foreground img.mental__image--fg {
@@ -184,12 +188,17 @@
   #innovationBg3, #innovationBg4, #innovationBg5 {
     display: none; }
   .life, .life[class*="span"] {
-    height: 110vh;
+    height: 72vh;
     padding-bottom: 0; }
+  .life .slideshow {
+    height: 42vh; }
   .life .life__slide--copy {
     width: 100%; }
   .life .bamboo-navigation {
     width: 90%; }
+  .life .bamboo.fade>.slides>* {
+    min-height: 50vh;
+    max-height: 50vh; }
   .footer h3, .footer[class*="span"] h3 {
     width: 90%;
     margin: 0 auto; }
@@ -231,6 +240,13 @@
     bottom: 5%; }
 }
 
+@media only screen and (max-width: 700px) {
+  .main__title, .main__title[class*="span"], .main__title[class*="span"]:first-child {
+    max-width: 98%; }
+  .main__title--group, .main__title--group[class*="span"], .main__title--group[class*="span"]:first-child {
+    padding-bottom: 2.5rem; } 
+}
+
 @media only screen and (max-width: 600px) {
   #menuToggle {
     right: 30px; }
@@ -260,10 +276,12 @@
   .life .slideshow {
     height: 90vh; }
   .life .bamboo.fade>.slides>* {
-    min-height: auto;
-    max-height: auto; }
+    min-height: 100%;
+    max-height: unset;
+    height: 110vh; }
   .life .life__slide--copy {
-    padding: 10% 2.5%; }
+    height: 100%;
+    padding: 10% 5%; }
   .stand .main__copy, .stand .main__copy[class*="span"], .stand .main__copy[class*="span"]:first-child {
     padding-top: 0; }
   .stand .main__copy h4.copy {
@@ -285,10 +303,20 @@
 }
 
 @media only screen and (max-width: 450px) {
+  .hero .hero__sub span {
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 1.8rem; }
   .testimonials .bamboo {
     height: 145vh; }
   .life .slideshow {
     height: 110vh; }
+  .testimonials .bamboo .bamboo-navigation {
+    bottom: 0; }
+  .message__identity h4 {
+    font-size: 24px; }
+  .message__identity h6 {
+    font-size: 18px; }
 }
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -306,14 +334,86 @@
 /* Styles */
 }
 
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-/* Styles */
+/* iPad Pro */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  .main, .main[class*="span"] {
+    min-height: unset; }
+  .hero {
+    height: 55vh; }
+  .fueling .fueling__bg {
+    display: none; }
+  .rewarding .rewarding__parallax {
+    display: none; }
+  .rewarding .rewarding__graph {
+    height: unset; }
+  .rewarding__graph.active div:nth-child(8) {
+    height: 45vh; }
+  .security .security__foreground {
+    display: none; }
+  .innovation, .innovation[class*="span"] {
+    height: 645vh; }
+  .innovation .innovation__point--item.active {
+    padding: 5% 0 0 0; }
+  .innovation .innovation__focus {
+    margin-top: -5% !important; }
+  .innovation .innovation__img, .innovation .innovation__img[class*="span"], .innovation .innovation__img[class*="span"]:first-child {
+    margin-left: unset !important; }
+  .testimonials .main__title {
+    position: relative; 
+    z-index: 999; }
+  .testimonials .bamboo {
+    height: 45vh; }
+  .life, .life[class*="span"] {
+    height: 65vh; }
+  .life .slideshow {
+    height: 40vh; }
+  .life .bamboo .fit-img {
+    top: -15%; }
+  .stand__focus {
+    height: 50vh; }
+  .footer img {
+    margin-top: -65%; }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .hero {
+    height: 105vh; }
+  .innovation, .innovation[class*="span"] {
+    height: 680vh; }
+  .innovation .innovation__focus {
+    margin-top: unset !important; }
+  .innovation .innovation__phone .innovation__img--container {
+    height: 85vh; }
+  #innovation6Screen { width: auto; }
+  .testimonials .bamboo {
+    height: 50vh; }
+  .life, .life[class*="span"] {
+    height: 80vh; }
+  .life .slideshow {
+    height: 50vh; }
+  .stand__focus {
+    height: 100vh; }
+  .footer img {
+    margin-top: unset; }
 }
 
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-/* Styles */
+  .hero {
+    height: 105vh; }
+  .innovation, .innovation[class*="span"] {
+    height: 700vh; }
+  .innovation .innovation__focus {
+    margin: 0 !important; }
+  .testimonials .bamboo {
+    height: 80vh; }
+  .life, .life[class*="span"] {
+    height: 110vh; }
+  .life .slideshow {
+    height: 65vh; }
+  .stand__focus {
+    height: 100vh; }
+  .footer img {
+    margin-top: unset; }
 }
 
 /* iPads (portrait) ----------- */
@@ -328,15 +428,6 @@ iPad 3
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
-/* Styles */
-}
-/* Desktops and laptops ----------- */
-@media only screen  and (min-width : 1224px) {
-/* Styles */
-}
-
-/* Large screens ----------- */
-@media only screen  and (min-width : 1824px) {
 /* Styles */
 }
 
@@ -355,7 +446,15 @@ iPad 3
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-/* Styles */
+  h1 { font-size: 36px; }
+  .hero .hero__sub span {
+    font-size: 16px; }
+  .numbers .numbers__select .row-depth-1 {
+    width: 48%; }
+  .testimonials .bamboo {
+    height: 230vh; }
+  .life .slideshow {
+    height: 130vh; }
 }
 
 /* iPhone 6, 7, 8 ----------- */
@@ -364,7 +463,8 @@ iPad 3
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-/* Styles */
+  .testimonials .bamboo {
+    height: 175vh; }
 }
 
 /* iPhone 6+, 7+, 8+ ----------- */
@@ -382,7 +482,10 @@ iPad 3
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
-/* Styles */
+  .testimonials .bamboo {
+    height: 135vh; }
+  .life .slideshow {
+    height: 90vh; }
 }
 
 /* iPhone XS Max, XR ----------- */
@@ -392,6 +495,32 @@ iPad 3
 
 @media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
 /* Styles */
+}
+
+/* Pixel 2 Portrait */
+@media screen and (min-device-width: 411px) and (max-device-height: 731px) and (orientation: portrait) {
+ .testimonials .bamboo .bamboo-navigation {
+    bottom: 0; }
+}
+
+/* Pixel 2 Landscape */
+@media screen and (min-device-width: 411px) and (max-device-height: 731px) and (orientation: landscape) {
+
+}
+
+/* Pixel XL Portrait */
+@media screen and (min-device-width: 411px) and (max-device-height: 823px) and (-webkit-device-pixel-ratio: 3.5) and (orientation: portrait) {
+  .testimonials .bamboo {
+    height: 135vh; }
+  .testimonials .bamboo .bamboo-navigation {
+    bottom: 0; }
+  .life .slideshow {
+    height: 80vh; }
+}
+
+/* Pixel XL Landscape */
+@media screen and (min-device-width: 411px) and (max-device-height: 823px) and (-webkit-device-pixel-ratio: 3.5) and (orientation: landscape) {
+
 }
 
 /* Samsung Galaxy S3 ----------- */
@@ -408,17 +537,16 @@ iPad 3
 /* Styles */
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
-/* Styles */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) {
+  .testimonials .bamboo {
+    height: 180vh; }
+  .testimonials .bamboo-navigation {
+    bottom: 0; }
 }
-
 /* Samsung Galaxy S5 ----------- */
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
-/* Styles */
-}
-
-@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
   .testimonials .bamboo {
-      height: 210vh;
-  }
+    height: 180vh; }
+  .testimonials .bamboo-navigation {
+    bottom: 0; }
 }
