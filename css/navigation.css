@@ -164,11 +164,11 @@ nav.mobile__nav {
   margin: 0 auto; }
 .footer h3,
 .footer[class*="span"] h3 {
-  font-family: var(--rt-light);
+  font-family: var(--rt--light);
   letter-spacing: .05em; }
 .footer h3 span,
 .footer[class*="span"] h3 span {
-  font-family: var(--rt-semi); }
+  font-family: var(--rt--semi); }
 .footer h3,
 .footer[class*="span"] h3,
 .footer h3 span,
