@@ -134,7 +134,7 @@ var bamboo = (function(){
                 index: p.index !== undefined ? p.index : 0,
                 vertical: p.vertical !== undefined ? p.vertical : false,
                 speed: 5000,
-                autoPlay: p.autoPlay !== undefined ? p.autoPlay : true,
+                autoPlay: p.autoPlay !== undefined ? p.autoPlay : false,
                 autoFitImg: p.autoFitImg !== undefined ? p.autoFitImg : true,
                 reverse: p.reverse !== undefined ? p.reverse : false,
                 timeout: p.timeout !== undefined ? p.timeout : 2000,
