@@ -95,6 +95,12 @@ function revealInnovation() {
     });
   };
 };
+function sliderHeight(el, target, child, num) {
+  var a = document.querySelector(el + " " + target).offsetHeight;
+  var b = a + num;
+  $(el).css("height", b + "px");
+  $(el + " " + child).css("height", a + "px");
+};
 /*======================================
  * =====================================
  * =========== INITIALIZER =============
@@ -119,18 +125,37 @@ var clickInit = function clickInit() {
   $("#menuToggle a").click(function(event) {
     $("#menuToggle input").prop("checked", false);
   });
-  $(".numbers__icon--item").click(function() {
+  $(".numbers__icon--item").click(function(event) {
     swapActive( this, ".numbers__selected", "item", "selected" );
     scrollElement( this.children[0], 100, 250 );
   });
+  setTimeout(function() {
+    $(".bamboo-navigation i, .bamboo-navigation li").click(function(event) {
+      $('html,body').animate({scrollTop: $(this.closest("[id]")).offset().top - 100});
+    });
+  },100);
+};
+var resizeInit = function resizeInit() {
+  var run;
+  $(window).resize(function() {
+    clearTimeout(run);
+    run = setTimeout(function() {
+      sliderHeight("#testimonialSlider", "p", ".slide", 150);
+      sliderHeight("#lifeSlider", "img.fit-img", "img.fit-img", 0);
+    },200);
+  });
 };
 var baseInit = function baseInit() {
-  navActive();
-  $("#selected1").parent().parent().addClass("active");
-  $("#item1").addClass("active");
-  $("#innovationFocus").children()[0].children[0].classList.add("flex-h");
   if (window.navigator.userAgent.indexOf("MSIE ") > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) $("body")[0].classList.add("ie");
   if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent) == true) $("body")[0].classList.add("osx");
+  setTimeout(function() {
+    navActive();
+    sliderHeight("#testimonialSlider", "p", ".slide", 150);
+    sliderHeight("#lifeSlider", "img.fit-img", "img.fit-img", 0);
+    $("#selected1").parent().parent().addClass("active");
+    $("#item1").addClass("active");
+    $("#innovationFocus").children()[0].children[0].classList.add("flex-h");
+  },100);
 };
 var rewardInit = function rewardInit() {
   if (w >= 750) parallaxScroll( $("#rewardingParallax1"), -500, 0, 1, 200 );
@@ -143,6 +168,7 @@ var mentalInit = function mentalInit() {
   parallaxScroll( $("#mentalParallax3"), 0, -300, 1, 300 );
 };
 var securityInit = function securityInit() {
+  parallaxScroll( $("#securityFg"), -250, 0, 1, 200 );
   parallaxScroll( $("#securityBg1"), 100, -50, 1, 200 );
   parallaxScroll( $("#securityBg2"), -100, 50, 1, 200 );
   parallaxScroll( $("#securityBg3"), 100, -50, 1, 200 );
@@ -156,7 +182,7 @@ var innovationInit = function InnovationInit() {
   if (w >= 769) parallaxScroll( $("#innovationBg3"), -500, 0, 1, 200 );
   if (w >= 769) parallaxScroll( $("#innovationBg4"), -400, 0, 1, 200 );
   if (w >= 769) parallaxScroll( $("#innovationBg5"), -300, 0, 1, 200 );
-  if (w >= 769) parallaxPinner( $("#innovationFocus"), $("#innovationFocus"), 0.15, 585 );
+  if (w >= 769) parallaxPinner( $("#innovationFocus"), $("#innovationFocus"), 0.15, 400 );
 };
 var testimonialInit = function testimonialInit() {
   bamboo(document.getElementById("testimonialSlider"), {
@@ -179,7 +205,6 @@ var lifeInit = function lifeInit() {
   });
 };
 var standInit = function standInit() {
-  //rallaxPinner( $("#standForFocus0"), $("#standForFocus0"), 0, 100 ),
   if (w >= 767) parallaxPinner( $("#standForFocus1"), $("#standForFocus1"), 0, 100 );
   if (w >= 767) parallaxPinner( $("#standForFocus2"), $("#standForFocus2"), 0, 100 );
   if (w >= 767) parallaxPinner( $("#standForFocus3"), $("#standForFocus3"), 0, 100 );
@@ -194,6 +219,7 @@ var standInit = function standInit() {
     events: {
       0: scrollInit(),
       1: clickInit(),
+      2: resizeInit(),
       3: baseInit()
     },
     slider: {
