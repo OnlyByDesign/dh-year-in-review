@@ -47,6 +47,7 @@ var sliderHeight = function sliderHeight(el, target, child, num) {
   var b = a + num;
   $(el).css("height", b + "px");
   $(el + " " + child).css("height", a + "px");
+  if (w <= 500 && el == "#lifeSlider") $(el).find(".slide").css("height", b + "px");
 };
 /*======================================
  * =====================================
@@ -107,6 +108,7 @@ function revealInnovation() {
  * =====================================
  * ===================================*/
 var w = $(window).width();
+var h = $(window).height();
 var scrollInit = function scrollInit() {
   $(window).scroll(function() {
     navActive();
@@ -159,6 +161,13 @@ var baseInit = function baseInit() {
     setTimeout(function() {
       sliderHeight("#testimonialSlider", "p", ".slide", 150);
       sliderHeight("#lifeSlider", "img.fit-img", "img.fit-img", 0);
+      if (w <= 1000) { //iphone fix this is jenky
+        $("#lifeSlider .slide:nth-child(3) .life__slide--copy").css("height","auto");
+        sliderHeight("#lifeSlider", ".slide:nth-child(3) .life__slide--copy", "#lifeSlider", 150);
+        setTimeout(function() {
+          $("#lifeSlider .slide:nth-child(3) .life__slide--copy").css("height","");
+        },50);
+      }
     },100);
   };
   navActive(), detect(), add(), size();
