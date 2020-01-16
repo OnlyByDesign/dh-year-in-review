@@ -11,10 +11,15 @@ body {
     min-height: 100vh;
     padding: 6rem 0 7rem 0;
     position: relative; }
+  .osx .main, 
+  .osx .main[class*="span"] {
+    min-height: unset; }
   .main__title--group,
   .main__title--group[class*="span"],
   .main__title--group[class*="span"]:first-child {
-    padding-bottom: 6rem; }
+    padding-bottom: 6rem;
+    position: relative;
+    z-index: 999;}
   .light h3, 
   .light h4, 
   .light h5, 
@@ -127,7 +132,10 @@ body {
     float: none; }
   .hero .hero__sub,
   .hero .hero__sub[class*="span"] {
-    text-align: center; }
+    text-align: center;
+    width: 80%;
+    float: none;
+    margin: 0 auto;}
   .hero .hero__sub span {
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
@@ -183,6 +191,8 @@ body {
     font-size: 20px;
     letter-spacing: 1px;
     padding-bottom: 3rem; }
+  .numbers .numbers__select .row-depth-1 {
+    flex: 1 0 10%; }
   .numbers__icon--item {
     min-width: 100px;
     padding: 0 2rem;
@@ -593,6 +603,7 @@ body {
     height: 100%;
     cursor: pointer; }
   
+  .fr #innovation1Screen { margin-top: -12px; }
   #innovation2Screen { object-fit:contain; height:auto; } 
   #innovation3Screen { object-fit:contain; height:auto; }
   #innovation4Screen { margin-top:-5px; }
@@ -666,6 +677,12 @@ body {
   .innovation .innovation__focus {
     height: auto !important;
     z-index: 0; }
+  /*.innovation.active .innovation__focus {
+    top: unset !important;
+    bottom: 0 !important;
+    height: auto !important;
+    width: auto !important;
+    position: fixed !important; }*/
   .innovation .innovation__background {
     position: absolute;
     width: 100%;
@@ -699,13 +716,15 @@ body {
     float: left;
     margin-left: -15%; }
   .ie .innovation .innovation__point--item .spacer {
-    display: none; }
+    margin-left: 58px; }
   .ie .innovation .innovation__point--item .focus img {
     display: inline-block;
     width: auto;
     height: 50px;
     min-width: 1px;
     min-height: 1px; }
+  .ie .innovation .innovation__point--item:nth-child(6) .focus img {
+    height: 35px; }
   .ie #innovation4Screen { height:auto; margin-top:-30px; }
   
   /*=====================TESTIMONIALS===============*/
@@ -813,7 +832,7 @@ body {
     outline: 0; }
   .life .bamboo .fit-img {
     max-width: 50%;
-    height: 100% !important;
+    /*height: 100% !important;*/
     min-height: 100vh;
     display: inline-block;
     object-fit: cover;
@@ -821,6 +840,8 @@ body {
     top: unset;
     transform: none;
     float: right; }
+  .osx .life .bamboo .fit-img {
+    min-height: 85vh; }
   .life .bamboo-navigation {
     width: 40%;
     right: unset;
@@ -991,7 +1012,7 @@ body {
   .message__identity[class*="span"],
   .message__copy,
   .message__copy[class*="span"] {
-    width: 75%; }
+    width: 85%; }
   .message__image, 
   .message .message__image[class*="span"] {
     position: absolute;
