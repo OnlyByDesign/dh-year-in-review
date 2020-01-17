@@ -163,11 +163,12 @@ var baseInit = function baseInit() {
       sliderHeight("#lifeSlider", "img.fit-img", "img.fit-img", 0);
       if (w <= 1000) { //iphone fix this is jenky
         $("#lifeSlider .slide:nth-child(3) .life__slide--copy").css("height","auto");
+        sliderHeight("#testimonialSlider", ".slide:nth-child(1) p", ".slide", 200);
         sliderHeight("#lifeSlider", ".slide:nth-child(3) .life__slide--copy", "#lifeSlider", 150);
         setTimeout(function() {
           $("#lifeSlider .slide:nth-child(3) .life__slide--copy").css("height","");
         },50);
-      }
+      };
     },100);
   };
   navActive(), detect(), add(), size();
