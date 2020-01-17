@@ -1,7 +1,7 @@
 <!--HEADER-->
 <div class="header">
   <div class="header__logo">
-    <img src="https://cdn2.hubspot.net/hubfs/5213739/2019%20Year%20in%20Review%20Landing%20Page/blue@2x.png" alt="Dialogue logo" />
+    <a href="{{ module.logo_url.href }}" target="_blank"><img src="{{ module.logo_img.href }}" alt="{{ module.logo_alt }}" /></a>
   </div>
   <nav class="header__nav">
     <ul>
@@ -29,8 +29,8 @@
 
 <!--FOOTER-->
 <div class="footer dark flex-v">
-    <img src="{{ module.image_src.href }}" alt="Dialogue Health" />
-    <h3>{% inline_rich_text field="richtext_field" value="{{ module.richtext_field }}" %}</h3>
+  <a href="{{ module.url_field.href }}" target="_blank"><img src="{{ module.image_src.href }}" alt="Dialogue Health" /></a>
+  <h3>{% inline_rich_text field="richtext_field" value="{{ module.richtext_field }}" %}</h3>
 </div>
 
 
