@@ -135,7 +135,10 @@ body {
     text-align: center;
     width: 80%;
     float: none;
-    margin: 0 auto;}
+    margin: 0 auto; }
+  html:lang(fr) .hero .hero__sub,
+  html:lang(fr) .hero .hero__sub[class*="span"] {
+    width: 70%; }
   .hero .hero__sub span {
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
@@ -677,12 +680,6 @@ body {
   .innovation .innovation__focus {
     height: auto !important;
     z-index: 0; }
-  /*.innovation.active .innovation__focus {
-    top: unset !important;
-    bottom: 0 !important;
-    height: auto !important;
-    width: auto !important;
-    position: fixed !important; }*/
   .innovation .innovation__background {
     position: absolute;
     width: 100%;
@@ -698,7 +695,7 @@ body {
   #innovationBg1 { position:absolute; width:50vw; left:-15vw; top:75vh; }
   #innovationBg2 { position:absolute; width:60vw; right:-20vw; top:195vh; }
   #innovationBg3 { position:absolute; width:40vw; left:27vw; top:365vh; opacity:0.35; }
-  #innovationBg4 { position:absolute; width:45vw; right:-12vw; top:489vh; }
+  #innovationBg4 { position:absolute; width:45vw; right:-12vw; top:470vh; }
   #innovationBg5 { position:absolute; width:40vw; left:27vw; top:600vh; opacity:0.35; }
   .innovation .innovation__trigger {
     position: absolute;

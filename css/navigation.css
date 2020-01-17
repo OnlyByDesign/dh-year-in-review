@@ -168,10 +168,11 @@ nav.mobile__nav {
 .footer[class*="span"] {
   min-height: 100vh;
   background: var(--darkblue); }
+.footer a {
+  margin: 0 auto; }
 .footer img {
   width: 125px;
-  height: auto;
-  margin: 0 auto; }
+  height: auto; }
 .footer h3,
 .footer[class*="span"] h3 {
   font-family: var(--rt--light);
